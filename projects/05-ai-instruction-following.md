@@ -188,3 +188,43 @@ A strong evaluator must determine not only whether an AI response is factually c
 ---
 
 *This project is a practical portfolio exercise demonstrating AI instruction-following evaluation methodology.*
+
+## Practical Example
+
+### Hallucination Detection Task
+
+#### AI-Generated Claim
+
+> "The World Health Organization was established in 1950 and is headquartered in New York City."
+
+#### Verification
+
+The statement contains factual errors.
+
+- The World Health Organization (WHO) was established in **1948**, not 1950.
+- Its headquarters are in **Geneva, Switzerland**, not New York City.
+
+#### Evaluation
+
+| Claim | Assessment | Finding |
+|---|---|---|
+| WHO established in 1950 | ❌ Incorrect | Established in 1948. |
+| WHO headquartered in New York City | ❌ Incorrect | Headquarters are in Geneva, Switzerland. |
+
+#### Hallucination Classification
+
+**Type:** Factual hallucination
+
+**Severity:** High
+
+The response presents incorrect factual information confidently without indicating uncertainty or providing verification.
+
+#### Corrected Response
+
+> "The World Health Organization (WHO) was established in 1948 and is headquartered in Geneva, Switzerland."
+
+#### Result
+
+This example demonstrates a structured process for identifying unsupported or incorrect claims, verifying factual information, classifying hallucination severity, and producing a corrected response.
+
+> **Note:** This is a simulated hallucination-detection example created to demonstrate an AI evaluation workflow.

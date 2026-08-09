@@ -100,131 +100,50 @@ AI systems may fail to follow instructions by:
 
 ## Multi-Requirement Evaluation
 
-For complex instructions, each requirement should be evaluated separately.
-
-### Example
-
-A user asks the AI to:
-
-- Provide three recommendations
-- Explain each recommendation briefly
-- Use a professional tone
-- Present the answer as a table
-- Avoid discussing pricing
-
-The evaluator should verify each requirement independently rather than judging the response as a single unit.
-
-## Scoring Framework
-
-A response can be assessed using the following scale:
-
-| Score | Description |
-|---|---|
-| 5 | Fully follows all instructions |
-| 4 | Follows almost all instructions with minor issues |
-| 3 | Partially follows the instructions |
-| 2 | Misses several important requirements |
-| 1 | Fails to follow the main instructions |
-
-## Quality Control
-
-To improve evaluation consistency:
-
-- Use clearly defined criteria.
-- Evaluate each instruction independently.
-- Distinguish factual errors from instruction-following errors.
-- Avoid personal preferences when judging compliance.
-- Provide evidence for the evaluation decision.
-- Apply the same standards across different responses.
-
-## Challenges & Solutions
-
-### Challenge 1: Complex Instructions
-
-**Solution:** Break the request into individual requirements before evaluating the response.
-
-### Challenge 2: Correct Answer but Wrong Format
-
-**Solution:** Evaluate factual correctness and instruction compliance as separate dimensions.
-
-### Challenge 3: Ambiguous Instructions
-
-**Solution:** Identify the most reasonable interpretation based on the available context and note any uncertainty.
-
-### Challenge 4: Excessive Information
-
-**Solution:** Determine whether the additional information violates an explicit user constraint or simply provides useful context.
-
-## Skills Demonstrated
-
-- AI Response Evaluation
-- Instruction Following Assessment
-- Quality Evaluation
-- Critical Thinking
-- Attention to Detail
-- Structured Reasoning
-- Response Analysis
-- Data Quality Assessment
-- Prompt Understanding
-- AI Training Methodology
-
-## Professional Relevance
-
-This project demonstrates practical skills relevant to:
-
-- AI Trainer
-- AI Response Evaluator
-- AI Data Annotator
-- AI Data Specialist
-- Prompt Engineering
-- AI Quality Assurance
-
-## Conclusion
-
-Instruction following is an essential component of high-quality AI systems.
-
-A strong evaluator must determine not only whether an AI response is factually correct, but also whether it accurately satisfies the user's requirements, constraints, and requested format.
-
----
-
-*This project is a practical portfolio exercise demonstrating AI instruction-following evaluation methodology.*
 
 ## Practical Example
 
-### Hallucination Detection Task
+### Instruction-Following Evaluation
 
-#### AI-Generated Claim
+#### User Instruction
 
-> "The World Health Organization was established in 1950 and is headquartered in New York City."
+> "Explain what a balance sheet is in exactly three bullet points. Use simple language and include one example."
 
-#### Verification
+#### AI-Generated Response
 
-The statement contains factual errors.
+> A balance sheet shows what a business owns and owes.
+>
+> It includes assets, liabilities, and owner's equity.
+>
+> For example, a company may have $50,000 in assets and $20,000 in liabilities.
+>
+> A balance sheet is useful for understanding the financial position of a business.
 
-- The World Health Organization (WHO) was established in **1948**, not 1950.
-- Its headquarters are in **Geneva, Switzerland**, not New York City.
+#### Instruction-Following Evaluation
 
-#### Evaluation
+| Requirement | Assessment |
+|---|---|
+| Explain the balance sheet | ✅ Satisfied |
+| Exactly three bullet points | ❌ Not satisfied |
+| Use simple language | ✅ Satisfied |
+| Include one example | ✅ Satisfied |
 
-| Claim | Assessment | Finding |
-|---|---|---|
-| WHO established in 1950 | ❌ Incorrect | Established in 1948. |
-| WHO headquartered in New York City | ❌ Incorrect | Headquarters are in Geneva, Switzerland. |
+#### Overall Assessment
 
-#### Hallucination Classification
+**Instruction-Following Score: 3/4**
 
-**Type:** Factual hallucination
+The response covers the requested topic, uses accessible language, and provides an example. However, it fails to follow the explicit formatting requirement of providing **exactly three bullet points**.
 
-**Severity:** High
+#### Improved Response
 
-The response presents incorrect factual information confidently without indicating uncertainty or providing verification.
-
-#### Corrected Response
-
-> "The World Health Organization (WHO) was established in 1948 and is headquartered in Geneva, Switzerland."
+- A balance sheet shows what a business owns and owes.
+- It includes assets, liabilities, and owner's equity.
+- Example: if a company has $50,000 in assets and $20,000 in liabilities, its owner's equity is $30,000.
 
 #### Result
 
-This example demonstrates a structured process for identifying unsupported or incorrect claims, verifying factual information, classifying hallucination severity, and producing a corrected response.
+The improved response satisfies all explicit requirements: correct topic, exactly three bullet points, simple language, and one practical example.
 
-> **Note:** This is a simulated hallucination-detection example created to demonstrate an AI evaluation workflow.
+> **Note:** This is a simulated instruction-following evaluation created to demonstrate a structured AI evaluation workflow.
+
+

@@ -196,3 +196,47 @@ This project demonstrates a structured approach to creating consistent, high-qua
 ---
 
 *This project is a practical portfolio exercise demonstrating financial data annotation methodology.*
+
+
+---
+
+## Practical Example
+
+### Financial Data Annotation Task
+
+#### Objective
+
+Annotate financial transactions according to their primary accounting category.
+
+#### Annotation Guidelines
+
+Use one label for each transaction:
+
+- **Revenue** — income generated from sales of products or services.
+- **Operating Expense** — costs incurred to operate the business.
+- **Asset Purchase** — purchases that create or increase a business asset.
+- **Liability** — amounts owed by the business to another party.
+
+#### Sample Dataset
+
+| ID | Financial Transaction | Label | Rationale |
+|---|---|---|---|
+| 1 | Sold products to a customer for $5,000. | Revenue | The transaction represents income generated from sales. |
+| 2 | Paid $1,200 for monthly office rent. | Operating Expense | Rent is a recurring cost of operating the business. |
+| 3 | Purchased a computer system for $3,000 for business use. | Asset Purchase | The computer system is a business asset expected to provide future benefit. |
+| 4 | Received a bank loan of $20,000. | Liability | The business has an obligation to repay the borrowed amount. |
+| 5 | Paid $800 for electricity and internet services. | Operating Expense | These are costs associated with normal business operations. |
+
+#### Annotation Quality Check
+
+Each transaction was assigned a single primary label based on the defined annotation guidelines. The rationale explains why the selected label is appropriate and helps maintain consistency between annotators.
+
+#### Potential Ambiguity
+
+Some financial transactions may require additional accounting context. For example, a purchase could be classified differently depending on whether it represents an operating expense, inventory, or a capital asset. Clear annotation guidelines and consistent decision rules are therefore important.
+
+#### Result
+
+This example demonstrates how financial-domain knowledge can be combined with structured data annotation to create consistent labeled datasets for AI training and evaluation.
+
+> **Note:** This is a simulated financial data-annotation example created to demonstrate a practical AI training workflow.

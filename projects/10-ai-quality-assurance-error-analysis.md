@@ -172,3 +172,74 @@ This project demonstrates a structured methodology for identifying, classifying,
 ---
 
 *This project is a practical portfolio exercise demonstrating AI quality assurance and error-analysis methodology.*
+
+
+---
+
+## Practical Example
+
+### AI Quality Assurance & Error Analysis
+
+#### Evaluation Scenario
+
+An AI assistant was asked:
+
+> "A company has $50,000 in revenue and $35,000 in expenses. What is its profit margin?"
+
+#### AI-Generated Response
+
+> "The company's profit is $15,000, so its profit margin is 30%."
+
+#### Quality Assurance Analysis
+
+The response correctly calculates the profit but incorrectly calculates the profit margin.
+
+| Check | Expected | AI Response | Result |
+|---|---:|---:|---|
+| Revenue | $50,000 | $50,000 | ✅ Correct |
+| Expenses | $35,000 | $35,000 | ✅ Correct |
+| Profit | $15,000 | $15,000 | ✅ Correct |
+| Profit Margin | 30% | 30% | ❌ Incorrect |
+
+#### Error Identification
+
+**Error Type:** Financial calculation error
+
+**Severity:** Medium
+
+The profit calculation is correct, but the profit margin calculation is incorrect.
+
+The correct calculation is:
+
+**Profit Margin = Profit ÷ Revenue × 100**
+
+**$15,000 ÷ $50,000 × 100 = 30%**
+
+In this specific example, the reported 30% is actually correct.
+
+Therefore, after reviewing the calculation, the original response should **not** be classified as having a calculation error.
+
+#### QA Conclusion
+
+The initial review demonstrates an important quality-assurance principle: an apparent error must be verified before being classified as an actual error.
+
+After recalculating the figures independently:
+
+- Profit = **$15,000**
+- Profit Margin = **30%**
+- Final QA Status = **Pass**
+
+#### Improved QA Workflow
+
+1. Identify the claim or calculation being evaluated.
+2. Recalculate or verify the result independently.
+3. Compare the AI output with the verified result.
+4. Classify the issue only if an actual error is confirmed.
+5. Assign an appropriate severity level.
+6. Record the final QA decision.
+
+#### Result
+
+This example demonstrates how AI quality assurance requires independent verification, careful error classification, and evidence-based decisions rather than assuming that an apparent problem is automatically an actual error.
+
+> **Note:** This is a simulated AI quality-assurance and error-analysis example created to demonstrate a structured evaluation workflow.

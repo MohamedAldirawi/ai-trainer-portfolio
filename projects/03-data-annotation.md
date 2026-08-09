@@ -106,3 +106,39 @@ The methodology can be adapted to different annotation and AI training tasks.
 ---
 
 *This project is a practical portfolio exercise demonstrating AI data annotation methodology.*
+
+## Practical Example
+
+### Data Annotation Task
+
+#### Objective
+
+Annotate a short set of customer-support statements according to their primary intent.
+
+#### Annotation Guidelines
+
+Use one label for each statement:
+
+- **Billing** — questions or issues related to payments, invoices, charges, or refunds.
+- **Technical Support** — problems related to software, systems, or technical functionality.
+- **Account** — issues related to account access, registration, or account information.
+
+#### Sample Dataset
+
+| ID | Customer Statement | Label |
+|---|---|---|
+| 1 | I was charged twice for the same order. | Billing |
+| 2 | I cannot log in to my account. | Account |
+| 3 | The application crashes whenever I try to upload a file. | Technical Support |
+| 4 | I would like to request a refund for my payment. | Billing |
+| 5 | I forgot my password and cannot access my account. | Account |
+
+#### Annotation Quality Check
+
+Each statement was assigned a single label according to the defined annotation guidelines. The labels are based on the primary intent of each statement rather than individual keywords.
+
+#### Result
+
+The annotation process demonstrates a structured approach to defining labels, applying consistent classification criteria, and checking annotation quality.
+
+> **Note:** This is a simulated data-annotation example created to demonstrate a practical AI training workflow.

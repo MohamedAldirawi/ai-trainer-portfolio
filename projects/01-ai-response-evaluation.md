@@ -103,3 +103,47 @@ In simple terms:
 ## Portfolio Note
 
 This is a practical portfolio project demonstrating a structured methodology for AI response evaluation. It is intended to showcase analytical ability, domain knowledge, and familiarity with AI training and quality-assessment workflows.
+
+---
+
+## Practical Example
+
+### Scenario
+
+A user asked an AI assistant:
+
+> "Explain the difference between revenue and profit in simple business terms, and give one practical example."
+
+### AI-Generated Response
+
+> "Revenue is the amount of money a business earns from selling its products or services. Profit is the money left after subtracting expenses from revenue.
+>
+> For example, if a company has $10,000 in sales and spends $7,000 on expenses, its profit is $3,000."
+
+### Evaluation
+
+| Criterion | Score | Evaluation |
+|---|---:|---|
+| Accuracy | 5/5 | The definitions are correct and the numerical example is accurate. |
+| Relevance | 5/5 | The response directly answers the user's question. |
+| Clarity | 5/5 | The explanation is simple and easy to understand. |
+| Completeness | 4/5 | The response explains the core distinction but could mention that revenue is recorded before operating expenses are deducted. |
+| Instruction Following | 5/5 | It follows the requested simple explanation and provides one practical example. |
+
+### Overall Assessment
+
+**Overall Score: 24/25**
+
+The response is accurate, relevant, clear, and follows the user's instructions. The main opportunity for improvement is adding slightly more financial context without making the explanation unnecessarily complex.
+
+### Improved Response
+
+> "Revenue is the total income a business generates from selling its products or services before expenses are deducted. Profit is the amount remaining after the business subtracts its expenses from revenue.
+>
+> For example, if a company generates $10,000 in revenue and has $7,000 in total expenses, its profit is $3,000."
+
+### Evaluation Rationale
+
+The improved response preserves the strengths of the original answer while making the distinction between revenue and profit more precise. The evaluation demonstrates a structured approach to assessing AI-generated content for factual accuracy, relevance, clarity, completeness, and instruction following.
+
+> **Note:** This is a simulated evaluation case created to demonstrate an AI response evaluation workflow.

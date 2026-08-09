@@ -146,3 +146,40 @@ This project demonstrates how domain expertise in accounting, finance, economics
 ---
 
 *This project is a practical portfolio exercise demonstrating business and finance domain expertise applied to AI training.*
+
+
+## Practical Example
+
+### AI Training Task: Business & Finance Response Evaluation
+
+#### Scenario
+
+An AI assistant was asked:
+
+> "What is the difference between gross profit and net profit?"
+
+#### AI-Generated Response
+
+> "Gross profit is revenue minus the cost of goods sold. Net profit is the amount remaining after all business expenses, including operating expenses, interest, and taxes, are deducted."
+
+#### Domain Evaluation
+
+| Criterion | Assessment |
+|---|---|
+| Financial Accuracy | Correct distinction between gross profit and net profit. |
+| Business Relevance | Directly addresses the business question. |
+| Terminology | Uses appropriate accounting terminology. |
+| Clarity | Clear and understandable for a general business audience. |
+| Completeness | Provides the core distinction but could benefit from a numerical example. |
+
+#### Domain-Based Improvement
+
+A stronger response would include a simple example:
+
+> "If a business has $20,000 in revenue and $12,000 in cost of goods sold, its gross profit is $8,000. If it then has $5,000 in operating expenses, interest, and taxes, its net profit is $3,000."
+
+#### Result
+
+The evaluation demonstrates how business and accounting domain knowledge can be applied to assess AI-generated responses, identify missing context, and improve the usefulness and precision of the final answer.
+
+> **Note:** This is a simulated business-and-finance AI training example created to demonstrate domain-based evaluation.

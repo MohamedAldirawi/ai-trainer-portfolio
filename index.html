@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mohammed A.M. Aldirawi | AI Trainer Portfolio</title>
+
+  <meta name="description"
+        content="AI Trainer portfolio of Mohammed A.M. Aldirawi — AI training, data annotation, prompt engineering, AI response evaluation, and business & finance domain expertise.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e9f0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #16213e;
+    }
+
+    .logo span {
+      color: #2563eb;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: linear-gradient(135deg, #eef4ff, #ffffff);
+      padding: 100px 0 90px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      color: #111827;
+    }
+
+    .hero h2 {
+      font-size: clamp(20px, 3vw, 30px);
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      font-size: 18px;
+      color: #5b6474;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    .button-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #172033;
+    }
+
+    .button-secondary:hover {
+      border-color: #2563eb;
+      color: #2563eb;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .section-title p {
+      color: #687386;
+      max-width: 720px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: #4b5563;
+      font-size: 17px;
+    }
+
+    .expertise-box {
+      background: #ffffff;
+      border: 1px solid #e5e9f0;
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    .expertise-box h3 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .tag {
+      background: #eef4ff;
+      color: #1d4ed8;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      background: #ffffff;
+      border: 1px solid #e5e9f0;
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    .skill-card h3 {
+      font-size: 17px;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .skill-card p {
+      font-size: 14px;
+      color: #687386;
+    }
+
+    /* PROJECTS */
+
+    .projects {
+      background: #ffffff;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: #f8fafc;
+      border: 1px solid #e3e8ef;
+      border-radius: 12px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      min-height: 245px;
+      transition: 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: #b8c8e8;
+    }
+
+    .project-number {
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .project-card h3 {
+      font-size: 19px;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .project-card p {
+      color: #667085;
+      font-size: 14px;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .project-link {
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    /* VALUE */
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .value-card {
+      background: #ffffff;
+      border: 1px solid #e5e9f0;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .value-card h3 {
+      margin-bottom: 12px;
+      font-size: 19px;
+    }
+
+    .value-card p {
+      color: #667085;
+      font-size: 15px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: #111827;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+    .contact .button-secondary {
+      background: transparent;
+      color: #ffffff;
+      border-color: #64748b;
+    }
+
+    .contact .button-secondary:hover {
+      border-color: #ffffff;
+      color: #ffffff;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0b1120;
+      color: #94a3b8;
+      padding: 25px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-inner {
+        min-height: 60px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .skills-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero h2 {
+        font-size: 21px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">
+        Mohammed<span>Aldirawi</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+    <div class="container hero-content">
+
+      <div class="eyebrow">
+        AI Trainer Portfolio
+      </div>
+
+      <h1>
+        Mohammed A.M. Aldirawi
+      </h1>
+
+      <h2>
+        AI Trainer | AI Data Annotation | Prompt Engineering |
+        Business &amp; Finance Domain Expert
+      </h2>
+
+      <p>
+        Business and finance professional developing practical expertise
+        in AI training, data annotation, prompt engineering, AI response
+        evaluation, and business &amp; finance domain applications.
+      </p>
+
+      <div class="buttons">
+        <a class="button button-primary"
+           href="#projects">
+          View AI Projects
+        </a>
+
+        <a class="button button-secondary"
+           href="https://github.com/MohamedAldirawi/ai-trainer-portfolio"
+           target="_blank">
+          GitHub Portfolio
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>About</h2>
+        <p>
+          A professional profile combining business and finance knowledge
+          with practical AI training and evaluation work.
+        </p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <p>
+            I hold a Bachelor's degree in Accounting and have professional
+            experience across accounting, auditing, financial analysis,
+            and business operations.
+          </p>
+
+          <p>
+            My current professional direction focuses on AI Trainer,
+            AI Data Annotation, Prompt Engineering, and AI Response
+            Evaluation roles.
+          </p>
+
+          <p>
+            My portfolio demonstrates structured approaches to evaluating
+            AI-generated responses, improving prompts, annotating data,
+            identifying hallucinations, analyzing bias, and applying
+            business and finance domain knowledge to AI training tasks.
+          </p>
+
+        </div>
+
+        <div class="expertise-box">
+
+          <h3>Professional Focus</h3>
+
+          <div class="tags">
+            <span class="tag">AI Training</span>
+            <span class="tag">Data Annotation</span>
+            <span class="tag">Prompt Engineering</span>
+            <span class="tag">AI Evaluation</span>
+            <span class="tag">Quality Assurance</span>
+            <span class="tag">Business Analysis</span>
+            <span class="tag">Financial Analysis</span>
+            <span class="tag">Accounting</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Core AI Skills</h2>
+        <p>
+          Practical capabilities demonstrated through the portfolio projects.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <h3>AI Response Evaluation</h3>
+          <p>
+            Evaluating AI outputs for accuracy, relevance, clarity,
+            completeness, and instruction following.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Data Annotation</h3>
+          <p>
+            Structured labeling and analysis of AI-related datasets
+            using consistent criteria.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Prompt Engineering</h3>
+          <p>
+            Designing structured prompts with clear objectives,
+            context, constraints, and expected outputs.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <h3>AI Quality Assurance</h3>
+          <p>
+            Identifying errors, inconsistencies, hallucinations,
+            and quality issues in AI-generated content.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJECTS -->
+
+  <section id="projects" class="projects">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>AI Portfolio Projects</h2>
+        <p>
+          A collection of 12 practical projects demonstrating AI training,
+          evaluation, annotation, and business &amp; finance applications.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+
+        <div class="project-card">
+          <div class="project-number">PROJECT 01</div>
+          <h3>AI Response Evaluation</h3>
+          <p>
+            Structured evaluation of AI-generated responses using
+            accuracy, relevance, clarity, completeness, and instruction
+            following criteria.
+          </p>
+          <a class="project-link"
+             href="projects/01-ai-response-evaluation.md">
+            View Project →
+          </a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-number">PROJECT 02</div>
+          <h3>Prompt Engineering Practice</h3>
+          <p>
+            Practical prompt design techniques for improving the quality,
+            consistency, and usefulness of AI-generated responses.
+          </p>
+          <a class="project-link"
+             href="projects/02-prompt-engineering.md">
+            View Project →
+          </a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-number">PROJECT 03</div>
+          <h3>AI Data Annotation</h3>
+          <p>
+            Structured data annotation methodology focused on consistency,
+            labeling accuracy, and AI training requirements.
+          </p>
+          <a class="project-link"
+             href="projects/03-data-annotation.md">
+            View Project →
+          </a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-number">PROJECT 04</div>
+          <h3>Business &amp; Finance AI Training</h3>
+          <p>
+            Applying accounting, business, finance, and economic knowledge
+            to AI training and evaluation scenarios.
+          </p>
+          <a class="project-link"
+             href="projects/04-business-finance-ai-training.md">
+            View Project →
+          </a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-number">PROJECT 05</div>
+          <h3>AI Instruction Following</h3>
+          <p>
+            Evaluating whether AI systems correctly follow explicit
+            user requirements, constraints, format, and tone.
+          </p>
+          <a class="project-link"
+             href="projects/05-ai-instruction-following.md">
+            View Project →
+          </a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-number">PROJECT 06</div>
+          <h3>AI Bias &amp; Fairness Evaluation</h3>
+          <p>
+            Identifying potential bias and fairness issues in
+            AI-generated responses.
+          </p>
+          <a class="project-link"
+             href="projects/06-ai-bias-and-fairness-evaluation.md">
+            View Project →
+          </a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-number">PROJECT 07</div>
+          <h3>AI Hallucination Detection</h3>
+          <p>
+            Detecting unsupported claims, factual errors, and hallucinated
+            information in AI-generated content.
+          </p>
+          <a class="project-link"
+             href="projects/07-ai-hallucination-detection.md">
+            View Project →
+          </a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-number">PROJECT 08</div>
+          <h3>AI Business &amp; Financial Analysis</h3>
+          <p>
+            Applying business and financial reasoning to AI analysis
+            and domain-specific evaluation tasks.
+          </p>
+          <a class="project-link"
+             href="projects/08-ai-business-financial-analysis.md">
+            View Project →
+          </a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-number">PROJECT 09</div>
+          <h3>AI Financial Data Annotation</h3>
+          <p>
+            Applying structured annotation principles to
+            financial and business-related AI data.
+          </p>
+          <a class="project-link"
+             href="projects/09-ai-financial-data-annotation.md">
+            View Project →
+          </a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-number">PROJECT 10</div>
+          <h3>AI Quality Assurance &amp; Error Analysis</h3>
+          <p>
+            Identifying, categorizing, and analyzing quality problems
+            in AI-generated outputs.
+          </p>
+          <a class="project-link"
+             href="projects/10-ai-quality-assurance-error-analysis.md">
+            View Project →
+          </a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-number">PROJECT 11</div>
+          <h3>AI Training Workflow</h3>
+          <p>
+            A structured workflow demonstrating key stages of practical
+            AI training and evaluation.
+          </p>
+          <a class="project-link"
+             href="projects/11-ai-training-workflow.md">
+            View Project →
+          </a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-number">PROJECT 12</div>
+          <h3>AI Data Quality Assurance</h3>
+          <p>
+            Quality assurance principles for maintaining consistency,
+            accuracy, and reliability in AI training data.
+          </p>
+          <a class="project-link"
+             href="projects/12-ai-data-quality-assurance.md">
+            View Project →
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- DOMAIN EXPERTISE -->
+
+  <section id="expertise">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Business &amp; Finance Domain Expertise</h2>
+        <p>
+          Domain knowledge supporting specialized AI training,
+          evaluation, annotation, and analysis tasks.
+        </p>
+      </div>
+
+      <div class="value-grid">
+
+        <div class="value-card">
+          <h3>Accounting &amp; Financial Analysis</h3>
+          <p>
+            Accounting principles, financial analysis, auditing,
+            financial data, and business reporting.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h3>Business &amp; Economics</h3>
+          <p>
+            Business operations, economic concepts, digital economy,
+            and analytical reasoning.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h3>AI + Domain Knowledge</h3>
+          <p>
+            Combining business and finance expertise with structured
+            AI evaluation, annotation, and training workflows.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact">
+
+    <div class="container">
+
+      <h2>Let's Connect</h2>
+
+      <p>
+        I am interested in opportunities related to AI training,
+        data annotation, prompt engineering, AI evaluation,
+        and business &amp; finance domain projects.
+      </p>
+
+      <div class="buttons" style="justify-content:center;">
+
+        <a class="button button-primary"
+           href="https://github.com/MohamedAldirawi/ai-trainer-portfolio"
+           target="_blank">
+          GitHub
+        </a>
+
+        <a class="button button-secondary"
+           href="https://www.linkedin.com/in/mohammed-a-m-aldirawi-95b026256/"
+           target="_blank">
+          LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+      © 2026 Mohammed A.M. Aldirawi — AI Trainer Portfolio
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -99,3 +99,43 @@ Prompt engineering can be particularly useful for business and finance tasks suc
 ## Portfolio Note
 
 This project demonstrates practical self-directed learning and application of prompt engineering techniques. It is part of an AI training portfolio focused on combining AI-related skills with business, finance, accounting, and analytical domain knowledge.
+
+## Practical Example
+
+### Prompt Improvement Task
+
+#### Original Prompt
+
+> Explain profit and revenue.
+
+#### Problems Identified
+
+The original prompt is too broad and does not specify the target audience, desired level of detail, structure, or practical context. This may lead to an inconsistent or overly generic response.
+
+#### Improved Prompt
+
+> Explain the difference between revenue and profit for a beginner in business. Use simple language, clearly define both terms, explain the relationship between them, and provide one practical numerical example using a small business. Keep the explanation concise and structured.
+
+#### Example AI Output
+
+Revenue is the total amount of money a business earns from selling its products or services before deducting expenses.
+
+Profit is the amount of money remaining after the business subtracts its expenses from its revenue.
+
+For example, if a small business generates $10,000 in revenue and has $7,000 in total expenses:
+
+- Revenue = $10,000
+- Expenses = $7,000
+- Profit = $3,000
+
+Therefore, revenue represents the money generated from sales, while profit represents what remains after expenses are deducted.
+
+#### Why the Improved Prompt Is Better
+
+The improved prompt provides a clear objective, identifies the target audience, specifies the required concepts, requests a practical example, and defines the desired response style. These constraints help produce a more focused, consistent, and useful AI response.
+
+#### Result
+
+The improved prompt produces a response that is more relevant, structured, understandable, and aligned with the intended user requirement.
+
+> **Note:** This is a simulated prompt-engineering example created to demonstrate prompt design, refinement, and output-quality improvement.

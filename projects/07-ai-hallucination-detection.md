@@ -190,3 +190,53 @@ This project demonstrates a structured methodology for identifying potential hal
 ---
 
 *This project is a practical portfolio exercise demonstrating AI hallucination detection and fact-checking methodology.*
+
+
+## Practical Example
+
+### AI Hallucination Detection
+
+#### User Request
+
+> "Provide a short factual summary of the World Health Organization, including its founding year and headquarters."
+
+#### AI-Generated Response
+
+> "The World Health Organization (WHO) was founded in 1950 and is headquartered in New York City. It is a United Nations organization responsible for coordinating international public health."
+
+#### Verification
+
+The response contains two factual inaccuracies:
+
+| Claim | Assessment | Finding |
+|---|---|---|
+| WHO was founded in 1950 | ❌ Incorrect | The WHO was established in 1948. |
+| WHO is headquartered in New York City | ❌ Incorrect | Its headquarters are in Geneva, Switzerland. |
+| WHO coordinates international public health | ✅ Correct | This accurately describes a core part of its role. |
+
+#### Hallucination Classification
+
+**Type:** Factual hallucination
+
+**Severity:** High
+
+The response presents incorrect factual claims with confidence instead of accurately representing verified information.
+
+#### Corrected Response
+
+> "The World Health Organization (WHO) was established in 1948 and is headquartered in Geneva, Switzerland. It is a specialized agency of the United Nations responsible for coordinating international public health."
+
+#### Evaluation Process
+
+1. Identify factual claims in the AI response.
+2. Separate verifiable claims from general descriptions.
+3. Verify each factual claim against a reliable source.
+4. Identify unsupported or incorrect information.
+5. Classify the hallucination by type and severity.
+6. Produce a corrected response.
+
+#### Result
+
+This example demonstrates a structured hallucination-detection workflow that identifies factual errors, verifies claims, assesses severity, and produces a more reliable AI response.
+
+> **Note:** This is a simulated hallucination-detection example created to demonstrate an AI training and evaluation workflow.

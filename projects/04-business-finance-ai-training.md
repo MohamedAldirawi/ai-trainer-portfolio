@@ -2,17 +2,17 @@
 
 ## Project Overview
 
-This project demonstrates the application of business and finance domain knowledge to AI training and evaluation tasks.
+This project demonstrates how accounting, finance, economics, and business knowledge can be applied to AI training and response evaluation.
 
-The project focuses on developing structured examples that help AI systems understand financial concepts, business terminology, accounting principles, and practical business scenarios.
+The focus is on **domain accuracy, numerical reasoning, terminology, assumptions, and instruction following** in business and finance tasks.
+
+> **Portfolio status:** Simulated self-directed exercise demonstrating domain application to AI training. It does not claim professional AI employment experience.
 
 ## Objective
 
-Create high-quality training examples that enable AI systems to provide accurate, relevant, and logically structured responses to business and finance-related questions.
+Develop a repeatable framework for evaluating AI-generated business and finance responses and identifying errors that a general evaluator might miss without domain knowledge.
 
-## Domain Areas
-
-The project covers several areas of business and finance, including:
+## Domain Coverage
 
 - Accounting
 - Financial Analysis
@@ -26,160 +26,121 @@ The project covers several areas of business and finance, including:
 - E-commerce
 - Business Operations
 
-## AI Training Approach
+## Domain Evaluation Framework
 
-Business and finance examples are developed using a structured process:
+| Criterion | What the evaluator checks |
+|---|---|
+| Financial accuracy | Definitions, calculations, and relationships are correct |
+| Terminology | Accounting and finance terms are used appropriately |
+| Numerical reasoning | Arithmetic and financial logic are correct |
+| Assumptions | Missing information and assumptions are identified |
+| Relevance | The response answers the actual business question |
+| Clarity | The explanation is understandable to the target audience |
+| Instruction following | Required format, scope, and constraints are respected |
 
-1. Define the user question or business scenario.
-2. Identify the relevant business or financial concept.
-3. Analyze the required information.
-4. Develop an accurate and logically structured response.
-5. Review the response for correctness and clarity.
-6. Evaluate whether the response follows the user's instructions.
+## Case Study: Gross Profit vs Net Profit
 
-## Example Training Task
+### User Request
 
-### User Query
+> "What is the difference between gross profit and net profit? Give a simple numerical example."
 
-"What is the difference between revenue and profit?"
+### AI-Generated Response
 
-### Expected AI Response
+> "Gross profit is revenue minus the cost of goods sold. Net profit is the amount remaining after all business expenses, including operating expenses, interest, and taxes, are deducted."
 
-Revenue represents the total income generated from business activities before deducting expenses.
+### Evaluation
 
-Profit represents the amount remaining after relevant expenses have been deducted from revenue.
+| Criterion | Assessment | Score |
+|---|---|---:|
+| Financial accuracy | Core definitions are correct. | 5/5 |
+| Terminology | Appropriate accounting terminology is used. | 5/5 |
+| Relevance | Directly answers the question. | 5/5 |
+| Completeness | No numerical example was provided despite the instruction. | 3/5 |
+| Clarity | Concise and understandable. | 5/5 |
+| Instruction following | Misses an explicit requirement. | 4/5 |
 
-### Evaluation Criteria
+**Total: 27/30**
 
-The response should:
+### Domain-Based Improvement
 
-- Correctly define both concepts.
-- Clearly explain the difference.
-- Avoid misleading financial terminology.
-- Use language that is understandable to the intended audience.
+A stronger answer is:
 
-## Financial Analysis Example
+> "Gross profit is revenue minus cost of goods sold (COGS). Net profit is what remains after all applicable expenses, such as operating expenses, interest, and taxes, are deducted.
+>
+> Example: if revenue is $20,000 and COGS is $12,000, gross profit is $8,000. If other applicable expenses total $5,000, net profit is $3,000."
+
+### Why This Matters
+
+A response can be factually correct but still fail the task because it omits an explicit requirement. Domain evaluation therefore combines **subject-matter correctness with instruction-following**.
+
+## Case Study: Numerical Reasoning
 
 ### Scenario
 
 A company reports:
 
 - Revenue: $500,000
-- Operating Expenses: $350,000
+- Cost of Goods Sold: $300,000
+- Operating Expenses: $120,000
 
-### Analysis
+The expected calculation is:
 
-Operating profit can be calculated as:
+**Gross Profit = $500,000 − $300,000 = $200,000**
 
-**Operating Profit = Revenue − Operating Expenses**
+**Operating Profit = $200,000 − $120,000 = $80,000**
 
-**Operating Profit = $500,000 − $350,000 = $150,000**
+### Evaluation Checks
 
-The AI response should explain the calculation accurately and distinguish operating profit from other measures of profitability.
+An evaluator should verify:
 
-## Business Reasoning
+1. Whether the arithmetic is correct.
+2. Whether COGS was deducted before operating expenses.
+3. Whether the response incorrectly calls operating profit "net profit".
+4. Whether any additional assumptions are stated.
+5. Whether the calculation is explained clearly.
 
-AI systems should be able to analyze business scenarios by:
+## Domain Error Taxonomy
 
-- Identifying relevant financial information
-- Understanding relationships between financial variables
-- Applying appropriate accounting or business concepts
-- Explaining calculations clearly
-- Identifying potential inconsistencies
-- Providing logically supported conclusions
+Common business-and-finance AI errors include:
 
-## Quality Evaluation Criteria
+- **Definition error** — incorrect explanation of a financial concept.
+- **Calculation error** — incorrect arithmetic or formula application.
+- **Classification error** — confusing assets, liabilities, revenue, expenses, or cash flows.
+- **Terminology error** — using related financial terms as if they were interchangeable.
+- **Assumption error** — presenting an unstated assumption as a fact.
+- **Instruction error** — failing to satisfy the requested business task.
+- **Reasoning error** — reaching a conclusion unsupported by the provided figures.
 
-AI-generated business and finance responses are evaluated according to:
+## Quality-Control Procedure
 
-| Criterion | Description |
-|---|---|
-| Accuracy | Financial and business information is correct |
-| Relevance | The response directly addresses the question |
-| Reasoning | The conclusion follows logically from the information |
-| Clarity | Concepts and calculations are explained clearly |
-| Completeness | Important information is not omitted |
-| Instruction Following | The response follows the user's requirements |
+For each finance response:
 
-## Challenges & Solutions
-
-### Challenge 1: Financial Terminology
-
-**Solution:** Use established accounting and financial terminology accurately and explain specialized concepts when necessary.
-
-### Challenge 2: Numerical Errors
-
-**Solution:** Verify calculations and review the logical relationship between financial figures.
-
-### Challenge 3: Ambiguous Business Questions
-
-**Solution:** Analyze the context carefully and identify the assumptions required before providing an answer.
-
-### Challenge 4: Confusing Related Concepts
-
-**Solution:** Clearly distinguish between concepts such as revenue, profit, expenses, assets, liabilities, and cash flow.
-
-## Skills Demonstrated
-
-- Business Domain Knowledge
-- Accounting Knowledge
-- Financial Analysis
-- Business Reasoning
-- AI Response Evaluation
-- AI Training
-- Data Annotation
-- Prompt Engineering
-- Critical Thinking
-- Numerical Reasoning
-- Quality Assessment
+1. Identify the exact user requirement.
+2. Verify definitions against established accounting concepts.
+3. Recalculate numerical results independently.
+4. Check terminology and classification.
+5. Identify assumptions or missing data.
+6. Score the response against the rubric.
+7. Produce an improved answer when needed.
+8. Perform a final consistency check.
 
 ## Professional Relevance
 
-This project demonstrates the ability to combine professional accounting and business knowledge with AI training and evaluation methodologies.
+This project demonstrates a useful combination of **domain expertise and AI evaluation methodology**. It is especially relevant to AI Trainer, AI Data Annotator, AI Response Evaluator, and Business & Finance AI Specialist roles where financial knowledge improves evaluation quality.
 
-It is particularly relevant to AI Trainer, AI Data Annotator, AI Response Evaluator, and Business & Finance AI Specialist roles.
+## Skills Demonstrated
+
+- Accounting Domain Knowledge
+- Financial Analysis
+- Business Reasoning
+- Numerical Verification
+- AI Response Evaluation
+- Error Taxonomy Design
+- Quality Assurance
+- Prompt and Instruction Analysis
+- Structured Feedback
+- Critical Thinking
 
 ## Conclusion
 
-This project demonstrates how domain expertise in accounting, finance, economics, and business can contribute to the development, training, and evaluation of AI systems.
-
----
-
-*This project is a practical portfolio exercise demonstrating business and finance domain expertise applied to AI training.*
-
-
-## Practical Example
-
-### AI Training Task: Business & Finance Response Evaluation
-
-#### Scenario
-
-An AI assistant was asked:
-
-> "What is the difference between gross profit and net profit?"
-
-#### AI-Generated Response
-
-> "Gross profit is revenue minus the cost of goods sold. Net profit is the amount remaining after all business expenses, including operating expenses, interest, and taxes, are deducted."
-
-#### Domain Evaluation
-
-| Criterion | Assessment |
-|---|---|
-| Financial Accuracy | Correct distinction between gross profit and net profit. |
-| Business Relevance | Directly addresses the business question. |
-| Terminology | Uses appropriate accounting terminology. |
-| Clarity | Clear and understandable for a general business audience. |
-| Completeness | Provides the core distinction but could benefit from a numerical example. |
-
-#### Domain-Based Improvement
-
-A stronger response would include a simple example:
-
-> "If a business has $20,000 in revenue and $12,000 in cost of goods sold, its gross profit is $8,000. If it then has $5,000 in operating expenses, interest, and taxes, its net profit is $3,000."
-
-#### Result
-
-The evaluation demonstrates how business and accounting domain knowledge can be applied to assess AI-generated responses, identify missing context, and improve the usefulness and precision of the final answer.
-
-> **Note:** This is a simulated business-and-finance AI training example created to demonstrate domain-based evaluation.
+Domain-aware AI evaluation requires more than checking whether an answer sounds plausible. The evaluator must verify terminology, calculations, assumptions, reasoning, and compliance with the user's requirements.

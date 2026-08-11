@@ -123,7 +123,7 @@ Islamic University of Gaza, Palestine
 
 - Arabic — Native
 - English — Excellent
-- Malay — Basic
+- Malay — Intermediate
 
 ## Career Focus
 

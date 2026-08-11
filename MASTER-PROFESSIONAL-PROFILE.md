@@ -86,7 +86,7 @@ Additional completed courses should be added using their exact official course t
 
 - Arabic — Native
 - English — Excellent
-- Malay — Basic
+- Malay — Intermediate
 
 ## Portfolio Evidence
 
@@ -104,7 +104,7 @@ A recruiter should understand the candidate in one sentence:
 
 1. Use the exact professional title: **AI Trainer | AI Data Annotation | Prompt Engineering | Business & Finance Domain Expert**.
 2. Keep education as **Bachelor's Degree in Accounting, Islamic University of Gaza, 2009–2013**.
-3. Keep **Malay — Basic** consistently across Resume, LinkedIn, and GitHub.
+3. Keep **Malay — Intermediate** consistently across Resume, LinkedIn, and GitHub.
 4. Keep real employment experience separate from self-directed AI portfolio work.
 5. Use the same AI capability categories across resume, LinkedIn, and GitHub.
 6. Link the GitHub portfolio from the resume and LinkedIn.

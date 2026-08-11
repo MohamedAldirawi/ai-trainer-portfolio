@@ -10,13 +10,13 @@ This document is the single source of truth for the professional identity used a
 
 ## Professional Positioning
 
-Accounting and business professional transitioning into AI training, evaluation, annotation, and prompt engineering, combining a Bachelor's degree in Accounting and professional experience in accounting, auditing, financial analysis, and business operations with practical, self-directed AI-training work.
+Accounting and business professional transitioning into AI training, evaluation, annotation, and prompt engineering. Combines a Bachelor's degree in Accounting and professional experience in accounting, auditing, financial analysis, and business operations with practical, self-directed AI-training work.
 
 ### Core Value Proposition
 
 **Business & Finance domain expertise + structured AI evaluation discipline.**
 
-The professional story should consistently show that the candidate brings established accounting/business knowledge and is applying it to practical AI evaluation, annotation, prompt engineering, factuality checking, and quality assurance.
+The professional story should consistently show that the candidate brings established accounting/business knowledge and applies it to practical AI evaluation, annotation, prompt engineering, factuality checking, and quality assurance.
 
 ## AI Capability Areas
 
@@ -104,9 +104,11 @@ A recruiter should understand the candidate in one sentence:
 
 1. Use the exact professional title: **AI Trainer | AI Data Annotation | Prompt Engineering | Business & Finance Domain Expert**.
 2. Keep education as **Bachelor's Degree in Accounting, Islamic University of Gaza, 2009–2013**.
-3. Keep real employment experience separate from self-directed AI portfolio work.
-4. Use the same AI capability categories across resume, LinkedIn, and GitHub.
-5. Link the GitHub portfolio from the resume and LinkedIn.
-6. Feature **Business & Finance AI Training** and **AI Response Evaluation** as the strongest portfolio examples.
-7. Never claim paid AI employment, client work, or professional AI experience unless it is factually true.
-8. Keep the portfolio's transparency statement consistent: practical capability is demonstrated through self-directed/simulated exercises.
+3. Keep **Malay — Basic** consistently across Resume, LinkedIn, and GitHub.
+4. Keep real employment experience separate from self-directed AI portfolio work.
+5. Use the same AI capability categories across resume, LinkedIn, and GitHub.
+6. Link the GitHub portfolio from the resume and LinkedIn.
+7. Feature **Business & Finance AI Training** and **AI Response Evaluation** as the strongest portfolio examples.
+8. Surface selected portfolio evidence in the resume so Recruiters can move directly from resume to GitHub evidence.
+9. Never claim paid AI employment, client work, or professional AI experience unless it is factually true.
+10. Keep the portfolio's transparency statement consistent: practical capability is demonstrated through self-directed/simulated exercises.

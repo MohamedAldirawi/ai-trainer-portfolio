@@ -1,141 +1,161 @@
-# Prompt Engineering Practice
+# Project 02 — Prompt Engineering & Iterative Refinement
 
-## Project Overview
+## Project Type
 
-This project demonstrates practical prompt engineering techniques for improving the quality, consistency, and usefulness of AI-generated responses.
-
-The project focuses on designing structured prompts, defining clear objectives, providing relevant context, and specifying output requirements.
+**Simulated portfolio case study / self-directed practice**
 
 ## Objective
 
-Develop prompts that guide AI systems toward accurate, relevant, clear, and well-structured responses.
+Design and refine prompts that produce responses that are more accurate, relevant, consistent, and aligned with explicit user requirements.
 
-## Prompt Engineering Principles
+The focus is not on writing longer prompts. It is on identifying ambiguity, adding only useful constraints, and evaluating whether the revised prompt improves the expected output.
 
-### 1. Clear Instructions
+## Task Scenario
 
-The prompt should clearly explain what the AI is expected to do.
+A small-business owner asks an AI assistant to explain the difference between **revenue and profit** to a beginner.
 
-### 2. Context
-
-Relevant background information should be provided so the AI can understand the task correctly.
-
-### 3. Role Definition
-
-Assigning an appropriate role can help establish the expected perspective and expertise.
-
-### 4. Output Format
-
-The desired response format should be explicitly defined when structure is important.
-
-### 5. Constraints
-
-Important limitations, requirements, and exclusions should be clearly stated.
-
-### 6. Evaluation and Refinement
-
-Prompts should be tested and refined based on the quality of the resulting responses.
-
-## Example
-
-### Basic Prompt
-
-> Explain financial statements.
-
-### Improved Prompt
-
-> Act as a financial analysis instructor. Explain the purpose of the three main financial statements: the income statement, balance sheet, and cash flow statement. Use simple language suitable for a beginner, explain the relationship between the statements, and provide a small numerical example. Present the answer using clear headings and bullet points.
-
-## Why the Improved Prompt Is Better
-
-The improved prompt provides:
-
-- A defined role
-- A specific task
-- Relevant context
-- A target audience
-- Clear scope
-- A requested output structure
-- A practical example requirement
-
-These elements reduce ambiguity and make the expected output easier to evaluate.
-
-## Prompt Refinement Process
-
-1. Define the objective.
-2. Identify the target audience.
-3. Provide relevant context.
-4. Specify the AI's role when useful.
-5. Define the required output.
-6. Add constraints and exclusions.
-7. Test the prompt.
-8. Evaluate the response.
-9. Refine the prompt based on the results.
-
-## Business & Finance Application
-
-Prompt engineering can be particularly useful for business and finance tasks such as:
-
-- Financial statement analysis
-- Accounting explanations
-- Business analysis
-- Market analysis
-- Financial concepts
-- Data interpretation
-- Business report generation
-- Financial scenario analysis
-
-## Skills Demonstrated
-
-- Prompt engineering
-- Instruction design
-- AI interaction
-- Response quality analysis
-- Structured reasoning
-- Business and finance domain knowledge
-- Prompt refinement
-- Output evaluation
-
-## Portfolio Note
-
-This project demonstrates practical self-directed learning and application of prompt engineering techniques. It is part of an AI training portfolio focused on combining AI-related skills with business, finance, accounting, and analytical domain knowledge.
-
-## Practical Example
-
-### Prompt Improvement Task
-
-#### Original Prompt
+### Original Prompt
 
 > Explain profit and revenue.
 
-#### Problems Identified
+### Problems in the Original Prompt
 
-The original prompt is too broad and does not specify the target audience, desired level of detail, structure, or practical context. This may lead to an inconsistent or overly generic response.
+| Issue | Risk |
+|---|---|
+| No target audience | Response may be too technical or too basic |
+| No required scope | Important distinctions may be omitted |
+| No output structure | Responses may be inconsistent |
+| No practical example | Concept may remain abstract |
+| No length guidance | Response may be unnecessarily long |
 
-#### Improved Prompt
+## Prompt Refinement
 
-> Explain the difference between revenue and profit for a beginner in business. Use simple language, clearly define both terms, explain the relationship between them, and provide one practical numerical example using a small business. Keep the explanation concise and structured.
+### Version 1 — Basic
 
-#### Example AI Output
+> Explain the difference between revenue and profit.
 
-Revenue is the total amount of money a business earns from selling its products or services before deducting expenses.
+### Version 2 — Structured
 
-Profit is the amount of money remaining after the business subtracts its expenses from its revenue.
+> Explain the difference between revenue and profit for a beginner in business. Use simple language, define both terms, explain their relationship, and provide one practical numerical example. Keep the answer concise and use clear headings.
 
-For example, if a small business generates $10,000 in revenue and has $7,000 in total expenses:
+### Version 3 — Evaluation-Oriented
+
+> Act as a business fundamentals instructor. Explain the difference between revenue and profit for a beginner with no accounting background. Define each term precisely, explain the relationship between them, and provide one small-business numerical example. Use the format: **Definition → Difference → Example → Key takeaway**. Avoid unnecessary accounting terminology and do not introduce concepts that are not needed to answer the question.
+
+## Why Version 3 Is Stronger
+
+It specifies:
+
+- **Role:** business fundamentals instructor
+- **Audience:** beginner with no accounting background
+- **Objective:** explain and distinguish two concepts
+- **Accuracy requirement:** precise definitions
+- **Evidence requirement:** numerical example
+- **Output format:** four explicit sections
+- **Constraints:** avoid unnecessary terminology and scope expansion
+
+## Evaluation Rubric
+
+The expected output can be evaluated using a 25-point rubric:
+
+| Criterion | Weight | What good performance means |
+|---|---:|---|
+| Accuracy | 5 | Definitions and example are financially correct |
+| Relevance | 5 | Every part directly supports the requested explanation |
+| Instruction Following | 5 | Required structure, audience, and constraints are followed |
+| Clarity | 5 | Beginner can understand the explanation without specialist knowledge |
+| Completeness | 5 | Revenue, profit, relationship, and example are all covered |
+
+### Decision Rule
+
+- **22–25:** Strong response
+- **18–21:** Acceptable; minor refinement recommended
+- **13–17:** Needs improvement
+- **0–12:** Major revision required
+
+## Example Expected Output
+
+### Definition
+
+**Revenue** is the income a business generates from selling goods or services before expenses are deducted.
+
+**Profit** is the amount remaining after the relevant business expenses are deducted from revenue.
+
+### Difference
+
+Revenue measures the value generated from sales, while profit measures what remains after expenses.
+
+### Example
+
+A small business generates **$10,000 in revenue** and has **$7,000 in expenses**.
 
 - Revenue = $10,000
 - Expenses = $7,000
 - Profit = $3,000
 
-Therefore, revenue represents the money generated from sales, while profit represents what remains after expenses are deducted.
+### Key takeaway
 
-#### Why the Improved Prompt Is Better
+A business can have high revenue but low profit if its expenses are high.
 
-The improved prompt provides a clear objective, identifies the target audience, specifies the required concepts, requests a practical example, and defines the desired response style. These constraints help produce a more focused, consistent, and useful AI response.
+## Quality Review of the Example
 
-#### Result
+| Criterion | Score | Rationale |
+|---|---:|---|
+| Accuracy | 5/5 | Definitions and calculation are correct |
+| Relevance | 5/5 | No unnecessary concepts are introduced |
+| Instruction Following | 5/5 | Uses the requested structure and beginner-friendly language |
+| Clarity | 5/5 | Terms are explained in plain language |
+| Completeness | 5/5 | Covers definitions, difference, example, and takeaway |
+| **Total** | **25/25** | **Strong** |
 
-The improved prompt produces a response that is more relevant, structured, understandable, and aligned with the intended user requirement.
+## Failure Modes to Watch For
 
-> **Note:** This is a simulated prompt-engineering example created to demonstrate prompt design, refinement, and output-quality improvement.
+During prompt evaluation, the reviewer should look for:
+
+1. **Definition drift** — treating revenue as profit.
+2. **Calculation errors** — incorrect subtraction in the example.
+3. **Audience mismatch** — using unexplained accounting terminology.
+4. **Instruction failure** — ignoring the required structure.
+5. **Scope creep** — adding unrelated financial concepts.
+6. **Unsupported claims** — presenting assumptions as universal rules.
+
+## Refinement Workflow
+
+1. Define the user objective.
+2. Identify ambiguity in the original prompt.
+3. Add the minimum useful context.
+4. Specify audience and output requirements.
+5. Add relevant constraints.
+6. Generate or review the resulting response.
+7. Score the response against a fixed rubric.
+8. Identify failure modes.
+9. Refine the prompt.
+10. Re-evaluate the revised output.
+
+## Business & Finance Applications
+
+The same workflow can be applied to:
+
+- Financial statement explanations
+- Accounting classification
+- Budget analysis
+- Business case evaluation
+- Financial ratio explanations
+- Market and business research prompts
+- Financial-data interpretation
+- Customer-support knowledge tasks
+
+## Skills Demonstrated
+
+- Prompt engineering
+- Prompt refinement
+- Instruction design
+- Evaluation rubric design
+- Output-quality assessment
+- Error identification
+- Business and finance reasoning
+- Structured analytical thinking
+
+## Portfolio Integrity Note
+
+This is a **simulated portfolio case study created through self-directed practice**. It demonstrates a repeatable prompt-design and evaluation methodology; it does not claim professional employment experience as an AI prompt engineer.

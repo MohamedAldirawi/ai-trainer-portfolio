@@ -2,143 +2,137 @@
 
 ## Project Overview
 
-This project demonstrates a structured approach to AI data annotation and labeling. It focuses on applying clear annotation guidelines, maintaining consistency, and identifying ambiguous or low-quality data.
+This project demonstrates a structured approach to text classification and AI data annotation. The goal is to produce labels that are **accurate, consistent, reproducible, and auditable**.
 
-The project is designed to simulate practical data annotation tasks used in AI training and machine learning workflows.
+> **Portfolio status:** Simulated self-directed exercise created to demonstrate an AI data-annotation workflow. It does not represent paid annotation employment.
 
 ## Objective
 
-Develop a consistent annotation process that produces accurate, clear, and high-quality labeled data for AI model training and evaluation.
+Create a repeatable annotation workflow that converts unstructured text into reliable labels while identifying ambiguous cases and applying quality-control checks.
 
-## Annotation Tasks
+## Annotation Workflow
 
-The annotation workflow includes:
+1. Define the label taxonomy and decision rules.
+2. Read each item in full before assigning a label.
+3. Identify the primary intent rather than isolated keywords.
+4. Assign exactly one label when the task requires single-label classification.
+5. Record a concise rationale for difficult decisions.
+6. Flag ambiguous or insufficiently supported examples.
+7. Perform a second-pass quality check.
 
-- Identifying the intended meaning of text
-- Classifying text according to predefined categories
-- Detecting relevant entities and information
-- Identifying ambiguous or unclear content
-- Applying consistent labels based on annotation guidelines
-- Reviewing annotations for accuracy and consistency
+## Label Taxonomy
 
-## Data Quality Criteria
+For this case study, customer-support messages are classified into three primary intents:
 
-Each annotation is evaluated according to the following criteria:
+| Label | Definition | Typical examples |
+|---|---|---|
+| **Billing** | Payments, invoices, charges, refunds, or transaction disputes | Duplicate charge, refund request |
+| **Technical Support** | Software, system, application, or technical-functionality problems | App crash, upload failure |
+| **Account** | Login, registration, password, or account-information issues | Forgot password, cannot log in |
 
-| Criterion | Description |
-|---|---|
-| Accuracy | The label correctly represents the data |
-| Consistency | Similar examples receive similar labels |
-| Relevance | The annotation is relevant to the task |
-| Completeness | Important information is not overlooked |
-| Clarity | The annotation can be understood and reviewed easily |
+### Decision Rule
 
-## Example Annotation
+Choose the label that best represents the **primary reason for the user's message**. Do not classify from a single keyword when the surrounding context indicates another intent.
 
-### Input
+## Sample Dataset
 
-"Revenue increased significantly during the second quarter, while operating expenses remained stable."
+| ID | Customer Statement | Label | Confidence | Rationale |
+|---:|---|---|---|---|
+| 1 | I was charged twice for the same order. | Billing | High | The primary issue is a duplicate payment. |
+| 2 | I cannot log in to my account. | Account | High | The user cannot access the account. |
+| 3 | The application crashes whenever I upload a file. | Technical Support | High | The issue is application functionality. |
+| 4 | I would like to request a refund for my payment. | Billing | High | The request concerns a payment refund. |
+| 5 | I forgot my password and cannot access my account. | Account | High | The access problem is caused by account credentials. |
 
-### Task
+## Annotation Quality Rubric
 
-Identify the primary business topic.
+Each annotation can be reviewed against four dimensions:
 
-### Annotation
+| Criterion | 0 | 1 | 2 |
+|---|---|---|---|
+| Label correctness | Incorrect | Partially defensible | Correct |
+| Guideline consistency | Conflicts with rules | Minor inconsistency | Fully consistent |
+| Rationale quality | Missing/unsupported | Partly supported | Clear and evidence-based |
+| Ambiguity handling | Missed ambiguity | Ambiguity noticed but unresolved | Correctly flagged/resolved |
 
-**Category:** Financial Performance
+**Maximum:** 8 points per item.
 
-**Reason:** The statement discusses revenue and operating expenses, which are key indicators of financial performance.
+## Ambiguous-Case Handling
 
-## Handling Ambiguous Data
+Consider this example:
 
-When an example is unclear, the annotation process should:
+> "I cannot log in because the website keeps crashing after I enter my password."
 
-1. Review the annotation guidelines.
-2. Examine the context surrounding the data.
-3. Identify possible interpretations.
-4. Select the label best supported by the available evidence.
-5. Flag the example for review when the available information is insufficient.
+Possible labels include **Account** and **Technical Support**. The correct decision depends on the annotation policy. If the taxonomy defines the primary failure as system functionality, label **Technical Support**; if it prioritizes the user's account-access intent, label **Account**.
 
-## Quality Control
+The important training behavior is not pretending the case is unambiguous. The evaluator should document the decision rule and apply it consistently to similar cases.
 
-Quality control is performed by reviewing annotations for:
+## Inter-Annotator Consistency
 
-- Incorrect labels
-- Inconsistent decisions
-- Missing information
-- Ambiguous cases
-- Misinterpretation of context
+A production annotation process should measure agreement between annotators on the same sample. A simple agreement rate can be calculated as:
 
-The goal is to improve annotation reliability and reduce errors before data is used for AI training or evaluation.
+**Agreement Rate = Number of Matching Labels / Total Compared Labels × 100**
 
-## Challenges & Solutions
+For example, if two annotators agree on 19 of 20 items:
 
-### Challenge 1: Ambiguous Text
+**19 / 20 × 100 = 95% agreement**
 
-**Solution:** Analyze the context carefully and apply the annotation guidelines consistently.
+This is a descriptive quality signal; the appropriate agreement metric depends on the task and label design.
 
-### Challenge 2: Similar Categories
+## Quality-Control Checklist
 
-**Solution:** Define clear distinctions between categories and compare the input against the relevant criteria.
+Before accepting a labeled sample:
 
-### Challenge 3: Maintaining Consistency
+- [ ] The label matches the defined taxonomy.
+- [ ] The primary intent was considered.
+- [ ] The decision is supported by the text.
+- [ ] Similar cases would receive the same label.
+- [ ] Ambiguous cases are flagged where necessary.
+- [ ] No label was chosen solely because of a misleading keyword.
 
-**Solution:** Use standardized guidelines and review previous annotation decisions when necessary.
+## Common Annotation Errors
+
+### 1. Keyword Matching
+
+**Failure:** Labeling "payment" automatically as Billing even when the message is primarily about a technical payment-page error.
+
+**Correction:** Evaluate the complete context and primary intent.
+
+### 2. Inconsistent Similar Cases
+
+**Failure:** Assigning different labels to materially similar messages.
+
+**Correction:** Revisit the taxonomy and previous decisions.
+
+### 3. Forced Certainty
+
+**Failure:** Treating an ambiguous example as obvious.
+
+**Correction:** Flag the case and document the ambiguity.
+
+### 4. Missing Quality Review
+
+**Failure:** Treating the first annotation as final.
+
+**Correction:** Perform a second-pass review or sample-based QA.
 
 ## Skills Demonstrated
 
 - AI Data Annotation
 - Text Classification
-- Data Quality Assessment
+- Label Taxonomy Design
 - Annotation Guidelines
 - Contextual Analysis
 - Consistency Checking
-- Quality Control
-- Critical Thinking
+- Quality Assurance
+- Ambiguity Detection
+- Structured Reasoning
 - Attention to Detail
+
+## Employer-Relevant Evidence
+
+This project demonstrates that I can approach annotation as a **quality-controlled process**, rather than simply assigning labels. The emphasis is on clear guidelines, reproducibility, ambiguity management, and reviewable decisions.
 
 ## Conclusion
 
-This project demonstrates a structured approach to AI data annotation, emphasizing accuracy, consistency, contextual understanding, and data quality.
-
-The methodology can be adapted to different annotation and AI training tasks.
-
----
-
-*This project is a practical portfolio exercise demonstrating AI data annotation methodology.*
-
-## Practical Example
-
-### Data Annotation Task
-
-#### Objective
-
-Annotate a short set of customer-support statements according to their primary intent.
-
-#### Annotation Guidelines
-
-Use one label for each statement:
-
-- **Billing** — questions or issues related to payments, invoices, charges, or refunds.
-- **Technical Support** — problems related to software, systems, or technical functionality.
-- **Account** — issues related to account access, registration, or account information.
-
-#### Sample Dataset
-
-| ID | Customer Statement | Label |
-|---|---|---|
-| 1 | I was charged twice for the same order. | Billing |
-| 2 | I cannot log in to my account. | Account |
-| 3 | The application crashes whenever I try to upload a file. | Technical Support |
-| 4 | I would like to request a refund for my payment. | Billing |
-| 5 | I forgot my password and cannot access my account. | Account |
-
-#### Annotation Quality Check
-
-Each statement was assigned a single label according to the defined annotation guidelines. The labels are based on the primary intent of each statement rather than individual keywords.
-
-#### Result
-
-The annotation process demonstrates a structured approach to defining labels, applying consistent classification criteria, and checking annotation quality.
-
-> **Note:** This is a simulated data-annotation example created to demonstrate a practical AI training workflow.
+Reliable AI training data depends on consistent annotation decisions and disciplined quality control. This case study demonstrates a practical methodology for creating, reviewing, and improving labeled text data.

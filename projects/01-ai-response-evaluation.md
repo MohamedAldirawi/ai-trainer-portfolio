@@ -1,149 +1,131 @@
-# AI Response Evaluation
+# Project 01 — AI Response Evaluation
 
-## Project Overview
+## Project Type
 
-This project demonstrates a structured approach to evaluating AI-generated responses for accuracy, relevance, clarity, completeness, and adherence to user instructions.
-
-The evaluation framework is designed to simulate practical AI training and response-quality assessment tasks.
+**Simulated portfolio case study / self-directed practice**
 
 ## Objective
 
-Evaluate AI responses using consistent criteria and identify strengths, weaknesses, and opportunities for improvement.
+Demonstrate a repeatable method for evaluating AI-generated responses against explicit quality criteria, identifying weaknesses, and producing a justified improved version.
 
-## Evaluation Criteria
+## Evaluation Framework
 
-### 1. Accuracy
-- Is the information factually correct?
-- Are there unsupported or misleading claims?
-- Does the response distinguish facts from assumptions?
+Each response is reviewed across five dimensions:
 
-### 2. Relevance
-- Does the response directly address the user's request?
-- Does it avoid unnecessary information?
-- Does it remain focused on the intended task?
+| Criterion | Weight | Review question |
+|---|---:|---|
+| Accuracy | 5 | Are the claims and calculations correct? |
+| Relevance | 5 | Does the response directly answer the user's request? |
+| Instruction Following | 5 | Does it satisfy the explicit requirements and constraints? |
+| Clarity | 5 | Is the explanation understandable and logically organized? |
+| Completeness | 5 | Are the important requested elements covered? |
 
-### 3. Instruction Following
-- Did the AI follow all explicit user requirements?
-- Did it respect requested format, tone, and constraints?
-- Did it avoid introducing requirements that were not requested?
+**Maximum score: 25 points**
 
-### 4. Clarity
-- Is the response easy to understand?
-- Is the structure logical?
-- Are technical terms explained when necessary?
+### Rating Bands
 
-### 5. Completeness
-- Does the response address all important parts of the request?
-- Are any important details missing?
-- Does the response provide an actionable result when appropriate?
+- **22–25:** Strong
+- **18–21:** Acceptable with minor improvements
+- **13–17:** Needs improvement
+- **0–12:** Major revision required
 
-## Evaluation Process
+## Test Case
 
-1. Read and understand the original user request.
-2. Identify the key requirements and constraints.
-3. Review the AI-generated response.
-4. Evaluate the response against each criterion.
-5. Identify specific strengths and weaknesses.
-6. Provide a concise improvement recommendation.
-7. Produce an improved response when appropriate.
+### User Request
 
-## Example Evaluation
+> Explain the difference between revenue and profit in simple business terms, and give one practical example.
 
-**User Request:**
+### AI-Generated Response
 
-Explain the difference between revenue and profit to a small-business owner.
+> Revenue is the amount of money a business earns from selling its products or services. Profit is the money left after subtracting expenses from revenue. For example, if a company has $10,000 in sales and spends $7,000 on expenses, its profit is $3,000.
 
-**AI Response:**
+## Evaluation
 
-"Revenue is the total amount of money a business generates from selling its products or services. Profit is the amount remaining after deducting business expenses from revenue."
+| Criterion | Score | Assessment |
+|---|---:|---|
+| Accuracy | 5/5 | The definitions and numerical example are correct. |
+| Relevance | 5/5 | The response directly addresses the requested distinction and example. |
+| Instruction Following | 5/5 | It uses simple language and provides one practical example. |
+| Clarity | 5/5 | The explanation is concise and easy to understand. |
+| Completeness | 4/5 | It covers the core concepts but could make the revenue-before-expenses distinction more explicit. |
+| **Total** | **24/25** | **Strong** |
 
-**Evaluation:**
+## Strengths Identified
 
-| Criterion | Assessment |
-|---|---|
-| Accuracy | Strong |
-| Relevance | Strong |
-| Instruction Following | Strong |
-| Clarity | Strong |
-| Completeness | Good |
+- Correct distinction between revenue and profit.
+- Correct arithmetic: $10,000 − $7,000 = $3,000.
+- Directly answers the user's question.
+- Uses accessible language.
+- Includes the requested practical example.
 
-**Overall Assessment:**
+## Improvement Opportunity
 
-The response is accurate, concise, and directly addresses the question. It could be improved by adding a simple numerical example to make the distinction easier for a non-financial audience.
+The response is already strong, but the definition of revenue can be made more precise by explicitly stating that revenue is measured **before the relevant expenses are deducted**. The improved version should preserve the original simplicity rather than adding unnecessary accounting detail.
 
 ## Improved Response
 
-Revenue is the total money a business receives from selling its products or services.
+Revenue is the total income a business generates from selling its products or services **before expenses are deducted**.
 
-Profit is what remains after the business pays its expenses.
+Profit is the amount remaining after the business deducts its expenses from revenue.
 
-For example:
+**Example:**
 
 - Revenue: $10,000
 - Expenses: $7,000
 - Profit: $3,000
 
-In simple terms:
+**Key takeaway:** Revenue shows how much the business generated from sales, while profit shows what remains after expenses.
 
-**Revenue = money coming into the business**
+## Second-Pass Quality Check
 
-**Profit = money left after expenses**
+| Check | Result |
+|---|---|
+| Definitions accurate | Pass |
+| Calculation accurate | Pass |
+| Directly answers request | Pass |
+| Beginner-friendly | Pass |
+| No unnecessary scope expansion | Pass |
+| Practical example included | Pass |
+
+**Final assessment: 25/25 — Strong response.**
+
+## Error Taxonomy Used
+
+For future evaluations, errors can be classified as:
+
+- **Factual error** — incorrect statement of fact.
+- **Reasoning error** — conclusion does not follow from the information provided.
+- **Calculation error** — incorrect arithmetic or quantitative reasoning.
+- **Instruction-following error** — explicit user requirement is missed.
+- **Relevance error** — unnecessary or unrelated content dominates the answer.
+- **Clarity error** — correct information is difficult to understand.
+- **Completeness error** — an important requested element is missing.
+- **Unsupported claim** — claim is presented without adequate basis.
+
+## Evaluation Workflow
+
+1. Parse the user request.
+2. Extract explicit requirements and constraints.
+3. Review the AI response.
+4. Score each criterion independently.
+5. Identify specific errors or weaknesses.
+6. Explain the reasoning behind each score.
+7. Produce an improved response where appropriate.
+8. Perform a second-pass quality check.
+9. Record the final score and improvement rationale.
 
 ## Skills Demonstrated
 
 - AI response evaluation
 - Quality assessment
-- Instruction following analysis
-- Fact-checking mindset
-- Business and finance domain knowledge
-- Analytical reasoning
+- Rubric design and application
+- Instruction-following analysis
+- Factuality checking
+- Error taxonomy development
 - Structured feedback
-- Prompt and response analysis
+- Analytical reasoning
+- Business and finance domain knowledge
 
-## Portfolio Note
+## Portfolio Integrity Note
 
-This is a practical portfolio project demonstrating a structured methodology for AI response evaluation. It is intended to showcase analytical ability, domain knowledge, and familiarity with AI training and quality-assessment workflows.
-
----
-
-## Practical Example
-
-### Scenario
-
-A user asked an AI assistant:
-
-> "Explain the difference between revenue and profit in simple business terms, and give one practical example."
-
-### AI-Generated Response
-
-> "Revenue is the amount of money a business earns from selling its products or services. Profit is the money left after subtracting expenses from revenue.
->
-> For example, if a company has $10,000 in sales and spends $7,000 on expenses, its profit is $3,000."
-
-### Evaluation
-
-| Criterion | Score | Evaluation |
-|---|---:|---|
-| Accuracy | 5/5 | The definitions are correct and the numerical example is accurate. |
-| Relevance | 5/5 | The response directly answers the user's question. |
-| Clarity | 5/5 | The explanation is simple and easy to understand. |
-| Completeness | 4/5 | The response explains the core distinction but could mention that revenue is recorded before operating expenses are deducted. |
-| Instruction Following | 5/5 | It follows the requested simple explanation and provides one practical example. |
-
-### Overall Assessment
-
-**Overall Score: 24/25**
-
-The response is accurate, relevant, clear, and follows the user's instructions. The main opportunity for improvement is adding slightly more financial context without making the explanation unnecessarily complex.
-
-### Improved Response
-
-> "Revenue is the total income a business generates from selling its products or services before expenses are deducted. Profit is the amount remaining after the business subtracts its expenses from revenue.
->
-> For example, if a company generates $10,000 in revenue and has $7,000 in total expenses, its profit is $3,000."
-
-### Evaluation Rationale
-
-The improved response preserves the strengths of the original answer while making the distinction between revenue and profit more precise. The evaluation demonstrates a structured approach to assessing AI-generated content for factual accuracy, relevance, clarity, completeness, and instruction following.
-
-> **Note:** This is a simulated evaluation case created to demonstrate an AI response evaluation workflow.
+This is a **simulated portfolio case study created through self-directed practice**. It demonstrates a structured evaluation methodology and does not claim professional employment experience in AI training.

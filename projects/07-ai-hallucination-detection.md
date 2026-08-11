@@ -2,241 +2,160 @@
 
 ## Project Overview
 
-This project demonstrates a structured approach to identifying potential hallucinations, factual errors, unsupported claims, and misleading information in AI-generated responses.
+This project demonstrates a structured workflow for identifying factual errors, unsupported claims, numerical mistakes, fabricated information, and overconfident statements in AI-generated responses.
 
-The project focuses on evaluating whether AI outputs are supported by reliable information and whether claims are presented with an appropriate level of certainty.
+The focus is not simply to label a response as "wrong." The evaluator must identify the specific claim, verify it, classify the error, assess severity, and produce a defensible correction.
+
+> **Portfolio status:** Simulated self-directed case study demonstrating an AI evaluation workflow.
 
 ## Objective
 
-Develop a practical evaluation process for detecting inaccurate, fabricated, unsupported, or misleading information in AI-generated content.
+Build a repeatable fact-checking workflow that separates:
 
-## What Is an AI Hallucination?
-
-An AI hallucination occurs when an AI system produces information that appears plausible but is inaccurate, fabricated, unsupported, or inconsistent with available evidence.
-
-Examples may include:
-
-- Invented facts
-- Incorrect dates
-- Fabricated sources
-- False numerical information
-- Misquoted information
-- Incorrect calculations
+- Correct information
+- Incorrect information
 - Unsupported claims
-- Confident statements without sufficient evidence
+- Uncertain claims requiring verification
+- Numerical or logical errors
+- Overconfident conclusions
 
-## Evaluation Framework
+## Hallucination Taxonomy
 
-AI responses are evaluated using the following criteria:
+| Type | Description | Example |
+|---|---|---|
+| Factual | Incorrect verifiable claim | Wrong founding year |
+| Numerical | Incorrect number or calculation | $100 − $70 = $40 |
+| Source | Invented or misrepresented source | Fabricated citation |
+| Entity | Wrong person, organization, or place | Incorrect headquarters |
+| Definition | Incorrect explanation of a concept | Misstating profit |
+| Logical | Conclusion does not follow from evidence | Invalid inference |
+| Unsupported | Claim lacks adequate evidence | "Always reduces costs" |
+| Confidence | Certainty exceeds available evidence | Presenting uncertainty as fact |
 
-| Criterion | Description |
-|---|---|
-| Factual Accuracy | Claims are consistent with reliable information |
-| Evidence | Important claims have appropriate support |
-| Numerical Accuracy | Calculations and figures are correct |
-| Source Reliability | Referenced sources appear credible and relevant |
-| Consistency | Claims do not contradict established information |
-| Confidence Calibration | The response does not express unsupported certainty |
+## Evaluation Rubric
 
-## Fact-Checking Process
+| Criterion | 0 | 1 | 2 |
+|---|---|---|---|
+| Claim identification | Missed claims | Some claims identified | All material claims identified |
+| Verification | Not verified | Partially verified | Material claims independently verified |
+| Error classification | Incorrect/missing | Partially correct | Correct and specific |
+| Severity | Unsupported | Plausible | Evidence-based |
+| Correction | Missing | Partially correct | Accurate and appropriately qualified |
 
-The evaluation process follows these steps:
+**Maximum score: 10 points.**
 
-1. Identify factual claims in the AI response.
-2. Separate factual claims from opinions or interpretations.
-3. Identify claims that require verification.
-4. Compare claims against reliable information or available evidence.
-5. Check dates, names, numbers, definitions, and relationships.
-6. Identify unsupported or contradictory claims.
-7. Assess the severity of each issue.
-8. Document the findings.
-9. Recommend corrections when appropriate.
+## Fact-Checking Workflow
 
-## Example 1 — Fabricated Information
+1. Extract each material factual claim.
+2. Separate facts from opinions and interpretations.
+3. Identify which claims require external verification.
+4. Verify important claims using authoritative or otherwise reliable sources.
+5. Recalculate numerical claims independently.
+6. Check entities, dates, definitions, and relationships.
+7. Record evidence and uncertainty.
+8. Classify each confirmed issue.
+9. Assign severity based on potential impact.
+10. Produce a corrected response without introducing new unsupported claims.
+
+## Practical Case Study — Numerical Hallucination
+
+### User Request
+
+> "A company has revenue of $100,000 and expenses of $70,000. What is its profit?"
 
 ### AI Response
 
-"The International Accounting Standards Board was established in 1998."
+> "The company's profit is $40,000."
 
-### Evaluation
+### Claim Verification
 
-**Status:** Potential factual error
+| Claim | Verification | Result |
+|---|---|---|
+| Revenue = $100,000 | Given by user | ✅ |
+| Expenses = $70,000 | Given by user | ✅ |
+| Profit = $40,000 | $100,000 − $70,000 | ❌ |
 
-The claim should be verified against an authoritative source before being accepted.
-
-### Recommended Action
-
-Do not automatically accept the statement because it sounds plausible. Verify the date using a reliable source and correct the response if necessary.
-
-## Example 2 — Numerical Error
-
-### AI Response
-
-"A company with revenue of $100,000 and expenses of $70,000 has a profit of $40,000."
-
-### Evaluation
-
-**Status:** Incorrect calculation
-
-The correct calculation is:
+### Correct Calculation
 
 **Profit = Revenue − Expenses**
 
 **Profit = $100,000 − $70,000 = $30,000**
 
-### Error Type
+### Error Record
 
-**Numerical hallucination / calculation error**
+| Field | Decision |
+|---|---|
+| Error type | Numerical / calculation error |
+| Severity | High |
+| Evidence | User-provided figures |
+| Correct result | $30,000 |
+| Required action | Replace incorrect calculation |
 
-## Example 3 — Unsupported Claim
+### Corrected Response
+
+> "The company's profit is **$30,000**, calculated as $100,000 in revenue minus $70,000 in expenses."
+
+## Practical Case Study — Unsupported Generalization
 
 ### AI Response
 
-"Companies that use artificial intelligence always reduce their operating costs."
+> "Companies that use AI always reduce operating costs."
 
 ### Evaluation
 
-**Status:** Unsupported generalization
+**Status:** Unsupported claim
 
-The word "always" makes the statement excessively broad. The impact of AI on operating costs depends on the company, implementation strategy, industry, technology costs, and other factors.
+The word **"always"** makes the statement absolute. Whether AI reduces costs depends on implementation costs, labor structure, technology costs, process changes, industry, and the specific use case.
 
-### Recommended Improvement
+### Better Response
 
-A more appropriate statement would acknowledge that AI can reduce certain costs in some circumstances but may also introduce implementation and operating expenses.
+> "AI can reduce certain operating costs in some situations, but the financial impact depends on implementation costs, the use case, and how the technology changes existing processes."
 
-## Hallucination Categories
+## Practical Case Study — Factual Verification
 
-Potential hallucinations can be classified as:
+### AI Response
 
-- Factual hallucination
-- Numerical hallucination
-- Source hallucination
-- Citation hallucination
-- Historical error
-- Entity error
-- Definition error
-- Logical inconsistency
-- Unsupported claim
-- Overconfident conclusion
+> "The World Health Organization was founded in 1950 and is headquartered in New York City."
 
-## Severity Assessment
+### Evaluation
 
-| Level | Description |
-|---|---|
-| Critical | Major false information that could significantly mislead the user |
-| High | Important factual or numerical error |
-| Medium | Meaningful error with limited impact |
-| Low | Minor imprecision or incomplete qualification |
+The statement contains material factual errors. A professional evaluator should verify both claims against authoritative information before accepting or correcting them.
+
+**Classification:** Factual hallucination
+
+**Severity:** High
+
+The key lesson is that plausible wording and confident tone are not evidence of accuracy.
+
+## Quality-Control Rules
+
+- Never treat confidence as proof.
+- Verify high-impact claims independently.
+- Recalculate numerical claims separately.
+- Distinguish an unverified claim from a confirmed false claim.
+- Record the evidence supporting each correction.
+- Avoid replacing one unsupported claim with another.
+- Re-check the corrected response before finalizing it.
 
 ## Business & Finance Application
 
-Fact-checking is particularly important when evaluating AI outputs involving:
+Hallucination detection is particularly important for AI outputs involving accounting, financial analysis, financial statements, business decisions, economic information, banking, taxation concepts, market information, and numerical calculations.
 
-- Accounting
-- Financial analysis
-- Financial statements
-- Business decisions
-- Economic information
-- Financial markets
-- Banking
-- Tax concepts
-- Numerical calculations
-- Business statistics
-
-Financial information should receive careful review because inaccurate information can lead to incorrect business decisions.
-
-## Quality Control
-
-To improve fact-checking reliability:
-
-- Verify important claims independently.
-- Prefer authoritative sources.
-- Check calculations separately.
-- Avoid treating confident language as evidence.
-- Distinguish uncertainty from factual error.
-- Document the reason for each correction.
-- Avoid introducing unsupported information during the correction process.
+A small numerical or terminology error can materially change a financial conclusion, so domain-aware verification is essential.
 
 ## Skills Demonstrated
 
 - AI Response Evaluation
-- Fact Checking
 - Hallucination Detection
-- Critical Thinking
-- Financial Analysis
-- Accounting
-- Numerical Reasoning
+- Fact Checking
+- Error Classification
+- Numerical Verification
+- Evidence-Based Reasoning
+- Business & Finance Domain Evaluation
 - Quality Assurance
-- Research and Verification
-- Attention to Detail
+- Critical Thinking
+- Confidence Calibration
 
-## Professional Relevance
+## Recruiter Takeaway
 
-This project demonstrates practical skills relevant to:
-
-- AI Trainer
-- AI Response Evaluator
-- AI Data Annotator
-- AI Quality Assurance
-- Business & Finance AI Training
-- Prompt Engineering
-
-## Conclusion
-
-Reliable AI systems require systematic evaluation of factual accuracy, numerical correctness, evidence, and confidence.
-
-This project demonstrates a structured methodology for identifying potential hallucinations and improving the reliability of AI-generated responses.
-
----
-
-*This project is a practical portfolio exercise demonstrating AI hallucination detection and fact-checking methodology.*
-
-
-## Practical Example
-
-### AI Hallucination Detection
-
-#### User Request
-
-> "Provide a short factual summary of the World Health Organization, including its founding year and headquarters."
-
-#### AI-Generated Response
-
-> "The World Health Organization (WHO) was founded in 1950 and is headquartered in New York City. It is a United Nations organization responsible for coordinating international public health."
-
-#### Verification
-
-The response contains two factual inaccuracies:
-
-| Claim | Assessment | Finding |
-|---|---|---|
-| WHO was founded in 1950 | ❌ Incorrect | The WHO was established in 1948. |
-| WHO is headquartered in New York City | ❌ Incorrect | Its headquarters are in Geneva, Switzerland. |
-| WHO coordinates international public health | ✅ Correct | This accurately describes a core part of its role. |
-
-#### Hallucination Classification
-
-**Type:** Factual hallucination
-
-**Severity:** High
-
-The response presents incorrect factual claims with confidence instead of accurately representing verified information.
-
-#### Corrected Response
-
-> "The World Health Organization (WHO) was established in 1948 and is headquartered in Geneva, Switzerland. It is a specialized agency of the United Nations responsible for coordinating international public health."
-
-#### Evaluation Process
-
-1. Identify factual claims in the AI response.
-2. Separate verifiable claims from general descriptions.
-3. Verify each factual claim against a reliable source.
-4. Identify unsupported or incorrect information.
-5. Classify the hallucination by type and severity.
-6. Produce a corrected response.
-
-#### Result
-
-This example demonstrates a structured hallucination-detection workflow that identifies factual errors, verifies claims, assesses severity, and produces a more reliable AI response.
-
-> **Note:** This is a simulated hallucination-detection example created to demonstrate an AI training and evaluation workflow.
+This project demonstrates the ability to turn a vague concern such as "the AI may be hallucinating" into a **repeatable evaluation workflow with claim extraction, verification, error taxonomy, severity assessment, correction, and quality control**.

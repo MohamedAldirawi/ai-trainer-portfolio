@@ -2,244 +2,136 @@
 
 ## Project Overview
 
-This project demonstrates the application of accounting, financial analysis, and business knowledge to AI-assisted analytical tasks.
+This project demonstrates how accounting and financial-analysis knowledge can be applied to AI evaluation tasks involving calculations, financial relationships, business reasoning, assumptions, and interpretation.
 
-The project focuses on interpreting business information, identifying relevant financial relationships, analyzing numerical data, and evaluating whether AI-generated conclusions are logically supported by the available information.
+The evaluator does not only check whether an answer contains the correct number. The workflow verifies the calculation, accounting relationship, assumptions, interpretation, and alignment with the user's request.
+
+> **Portfolio status:** Simulated self-directed case study demonstrating domain-aware AI evaluation.
 
 ## Objective
 
-Develop structured business and financial analysis tasks that can be used to evaluate the analytical reasoning, numerical accuracy, and domain understanding of AI-generated responses.
+Evaluate whether AI-generated business and financial analysis is:
 
-## Analytical Framework
+- Numerically accurate
+- Financially and logically sound
+- Relevant to the business question
+- Complete enough for the requested task
+- Clear about assumptions and limitations
 
-The analysis process follows these steps:
+## Analytical Workflow
 
-1. Understand the business scenario.
-2. Identify the relevant financial information.
-3. Determine the appropriate analytical approach.
-4. Perform or verify the required calculations.
-5. Interpret the results in a business context.
-6. Evaluate the AI-generated reasoning.
-7. Identify errors, unsupported assumptions, or missing information.
-8. Present the conclusion clearly.
+1. Extract the financial inputs.
+2. Identify the required metric or accounting relationship.
+3. Perform the calculation independently.
+4. Compare the AI calculation with the verified result.
+5. Check terminology and accounting logic.
+6. Review assumptions and missing information.
+7. Evaluate the business interpretation.
+8. Record errors and recommend corrections.
 
-## Example 1 — Profitability Analysis
+## Core Evaluation Rubric
 
-### Scenario
+| Criterion | Weight | What is checked |
+|---|---:|---|
+| Numerical accuracy | 25% | Arithmetic and formulas |
+| Financial logic | 20% | Correct accounting relationships |
+| Interpretation | 20% | Conclusion follows from results |
+| Relevance | 15% | Answers the requested business question |
+| Completeness | 10% | Important inputs and limitations considered |
+| Clarity | 10% | Explanation is understandable |
 
-A business reports:
+## Practical Case Study — Profitability Analysis
 
-- Revenue: $500,000
-- Cost of Goods Sold: $300,000
-- Operating Expenses: $120,000
+### User Request
 
-### Analysis
+> "A company generated $120,000 in revenue. COGS was $70,000, operating expenses were $30,000, and interest and taxes totaled $5,000. Calculate gross profit and net profit and explain the difference."
 
-**Gross Profit**
+### AI Response
 
-Gross Profit = Revenue − Cost of Goods Sold
+> "Gross profit is $50,000 and net profit is $15,000. Gross profit is revenue minus COGS, while net profit is what remains after operating expenses, interest, and taxes."
 
-Gross Profit = $500,000 − $300,000
+### Independent Verification
 
-**Gross Profit = $200,000**
+| Metric | Calculation | Verified result |
+|---|---|---:|
+| Gross profit | $120,000 − $70,000 | **$50,000** |
+| Net profit | $50,000 − $30,000 − $5,000 | **$15,000** |
+| Gross margin | $50,000 ÷ $120,000 | **41.7%** |
+| Net margin | $15,000 ÷ $120,000 | **12.5%** |
 
-**Operating Profit**
+### Evaluation
 
-Operating Profit = Gross Profit − Operating Expenses
-
-Operating Profit = $200,000 − $120,000
-
-**Operating Profit = $80,000**
-
-### Interpretation
-
-The company generated $200,000 in gross profit after accounting for the cost of goods sold. After operating expenses, the resulting operating profit was $80,000.
-
-## Example 2 — Profit Margin
-
-Using the previous scenario:
-
-Profit Margin = Operating Profit ÷ Revenue × 100
-
-Profit Margin = $80,000 ÷ $500,000 × 100
-
-**Operating Profit Margin = 16%**
-
-### AI Evaluation
-
-An AI-generated response should:
-
-- Calculate the margin correctly.
-- Use the correct numerator and denominator.
-- Explain the result clearly.
-- Avoid confusing operating profit margin with gross profit margin.
-
-## Example 3 — Inventory Analysis
-
-### Scenario
-
-A business has:
-
-- Opening Inventory: $80,000
-- Purchases: $250,000
-- Closing Inventory: $70,000
-
-### Analysis
-
-Cost of Goods Sold can be calculated as:
-
-COGS = Opening Inventory + Purchases − Closing Inventory
-
-COGS = $80,000 + $250,000 − $70,000
-
-**COGS = $260,000**
-
-### AI Evaluation
-
-The AI response should correctly identify the relationship between inventory movements, purchases, and cost of goods sold.
-
-## Business Reasoning
-
-AI-generated business analysis should consider:
-
-- Revenue
-- Costs
-- Profitability
-- Cash flow
-- Inventory
-- Sales performance
-- Operating expenses
-- Financial ratios
-- Business performance indicators
-- Relevant assumptions
-
-## Financial Analysis Quality Criteria
-
-| Criterion | Description |
+| Criterion | Result |
 |---|---|
-| Numerical Accuracy | Calculations are correct |
-| Financial Logic | Relationships between figures are logically correct |
-| Business Relevance | Analysis addresses the business question |
-| Completeness | Important information is considered |
-| Assumptions | Assumptions are clearly identified |
-| Interpretation | Results are explained appropriately |
-| Clarity | Findings are presented clearly |
+| Numerical accuracy | Pass |
+| Financial logic | Pass |
+| Interpretation | Pass |
+| Relevance | Pass |
+| Completeness | Pass |
+| Clarity | Pass |
 
-## Common Analytical Errors
+**Overall assessment: 5/5 — Pass**
 
-AI systems may produce errors such as:
+## Practical Case Study — Inventory / COGS
 
-- Incorrect calculations
-- Confusing revenue with profit
-- Misinterpreting financial ratios
-- Ignoring relevant expenses
-- Using incorrect accounting relationships
-- Making unsupported business conclusions
-- Confusing cash flow with accounting profit
-- Misinterpreting inventory movements
+### Inputs
 
-## Error Detection Process
+- Opening inventory: $80,000
+- Purchases: $250,000
+- Closing inventory: $70,000
 
-When reviewing an AI-generated financial analysis:
+### Verification
 
-1. Verify the numerical calculations.
-2. Check the accounting relationships.
-3. Review the assumptions.
-4. Compare the conclusion with the underlying data.
-5. Identify unsupported statements.
-6. Determine whether the conclusion logically follows from the analysis.
-7. Recommend corrections where necessary.
+**COGS = Opening Inventory + Purchases − Closing Inventory**
+
+**COGS = $80,000 + $250,000 − $70,000 = $260,000**
+
+### AI Evaluation Check
+
+An AI answer should use the correct inventory relationship and should not confuse purchases with COGS.
+
+## Common AI Financial Errors
+
+| Error | Example | Evaluation response |
+|---|---|---|
+| Calculation error | Wrong subtraction | Recalculate independently |
+| Formula error | Wrong numerator/denominator | Verify formula |
+| Concept confusion | Revenue treated as profit | Check definitions |
+| Ratio confusion | Gross margin vs net margin | Verify metric definition |
+| Cash/profit confusion | Cash movement treated as profit | Check accounting context |
+| Unsupported conclusion | Profit increase means business is healthier | Request supporting evidence |
+| Missing assumption | No period or currency specified | Flag limitation |
+
+## Assumption Control
+
+A domain-aware evaluator should identify assumptions such as:
+
+- Reporting period
+- Currency
+- Whether figures are totals or averages
+- Whether taxes and interest are included
+- Whether the requested profit measure is gross, operating, or net
+- Whether sufficient data is available for a reliable conclusion
+
+When the information is insufficient, the evaluator should **state the limitation rather than inventing an assumption silently**.
+
+## Error Analysis Workflow
+
+**Input → Formula/Rule → Independent Calculation → AI Comparison → Domain Check → Interpretation Check → Final Decision**
 
 ## Skills Demonstrated
 
-- Financial Analysis
 - Accounting
+- Financial Analysis
 - Business Analysis
 - Numerical Reasoning
 - AI Response Evaluation
-- Data Analysis
-- Critical Thinking
-- Quality Assurance
+- Domain-Aware Quality Assurance
 - Error Detection
-- Domain-Aware AI Evaluation
+- Assumption Analysis
+- Data Interpretation
+- Structured Reasoning
 
-## Professional Relevance
+## Recruiter Takeaway
 
-This project demonstrates how accounting and financial expertise can be applied to AI training, response evaluation, and business-domain AI tasks.
-
-It is relevant to:
-
-- AI Trainer
-- AI Data Annotator
-- AI Response Evaluator
-- Business & Finance AI Specialist
-- Prompt Engineer
-- Financial Data Annotation
-
-## Conclusion
-
-This project demonstrates a structured methodology for combining financial analysis and business reasoning with AI evaluation.
-
-The focus is on numerical accuracy, logical reasoning, domain correctness, and the quality of AI-generated analytical conclusions.
-
----
-
-*This project is a practical portfolio exercise demonstrating business and financial analysis applied to AI-related tasks.*
-
-
----
-
-## Practical Example
-
-### Business & Financial Analysis Task
-
-#### User Request
-
-> "A company generated $120,000 in revenue during the year. Its cost of goods sold was $70,000, operating expenses were $30,000, and interest and taxes totaled $5,000. Calculate the gross profit and net profit, and briefly explain the difference."
-
-#### AI-Generated Response
-
-> "The company's gross profit is $50,000, calculated as revenue minus cost of goods sold.
->
-> Its net profit is $15,000 after subtracting operating expenses, interest, and taxes.
->
-> Gross profit measures the amount remaining after the direct cost of producing or purchasing the goods sold, while net profit represents what remains after other business expenses are deducted."
-
-#### Financial Analysis
-
-| Metric | Calculation | Result |
-|---|---|---:|
-| Revenue | — | $120,000 |
-| Cost of Goods Sold | — | $70,000 |
-| Gross Profit | $120,000 − $70,000 | **$50,000** |
-| Operating Expenses | — | $30,000 |
-| Interest & Taxes | — | $5,000 |
-| Net Profit | $50,000 − $30,000 − $5,000 | **$15,000** |
-
-#### Evaluation
-
-| Criterion | Assessment |
-|---|---|
-| Calculation Accuracy | ✅ Correct |
-| Financial Terminology | ✅ Correct |
-| Relevance | ✅ Directly answers the request |
-| Explanation | ✅ Clearly distinguishes gross and net profit |
-| Completeness | ✅ Provides calculations and interpretation |
-
-#### Financial Insight
-
-The company generated a **gross profit margin of 41.7%** and a **net profit margin of 12.5%**.
-
-The difference between the two margins illustrates the impact of operating expenses, interest, and taxes on the company's final profitability.
-
-#### Overall Assessment
-
-**Score: 5/5**
-
-The AI response correctly performs the financial calculations, uses appropriate accounting terminology, and explains the difference between gross profit and net profit in a clear and practical way.
-
-#### Result
-
-This example demonstrates how business and financial domain knowledge can be used to evaluate AI-generated calculations, verify financial reasoning, identify relevant performance metrics, and assess the quality of an AI response.
-
-> **Note:** This is a simulated business and financial analysis example created to demonstrate a practical AI evaluation workflow.
+This project demonstrates a practical combination of **finance/accounting domain expertise and AI evaluation methodology**. The strongest evidence is the independent verification step: the evaluator checks the AI's calculations and reasoning instead of simply accepting a plausible-looking answer.

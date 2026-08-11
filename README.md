@@ -2,22 +2,37 @@
 
 ### AI Trainer | AI Data Annotation | Prompt Engineering | Business & Finance Domain Expert
 
-I am a business and finance professional with a Bachelor's degree in Accounting and professional experience in accounting, financial analysis, auditing, and business operations.
+Business and finance professional building practical expertise in AI training, data annotation, prompt engineering, AI response evaluation, and quality assurance.
 
-I am developing my expertise in AI training, data annotation, prompt engineering, and AI response evaluation, with a strong domain background in accounting, finance, business, and economics.
+My portfolio combines a **Bachelor's degree in Accounting** and professional experience in accounting, auditing, financial analysis, and business operations with structured AI-training projects.
+
+> **Portfolio principle:** demonstrate practical capability and transparent project evidence rather than claim AI employment experience that has not been held.
+
+---
+
+## What I Do
+
+- Evaluate AI-generated responses for accuracy, relevance, clarity, completeness, and instruction following.
+- Design and improve prompts using explicit objectives, context, constraints, and output requirements.
+- Perform structured data annotation and classification using consistent labeling criteria.
+- Identify factual errors, unsupported claims, hallucinations, and reasoning weaknesses.
+- Apply accounting, finance, business, and economics knowledge to AI evaluation tasks.
+- Perform quality assurance and error analysis on AI-training outputs.
 
 ## Core AI Skills
 
 - AI Training
-- Data Annotation
 - AI Response Evaluation
+- Data Annotation
 - Prompt Engineering
-- Instruction Following
+- Instruction Following Evaluation
+- Factuality & Hallucination Detection
+- Quality Assurance
+- Error Analysis
 - Text Classification
 - Data Labeling
-- Quality Assessment
-- Fact Checking
 - Structured Data Review
+- Response Improvement
 
 ## Business & Finance Domain Expertise
 
@@ -33,24 +48,22 @@ I am developing my expertise in AI training, data annotation, prompt engineering
 - Marketing
 - E-commerce
 
-## Portfolio
+## Portfolio Projects
 
-This repository contains practical projects demonstrating my ability to analyze, evaluate, annotate, and improve AI-generated content across business, finance, accounting, and general knowledge domains.
-
-### AI Training Projects
-
-Projects will cover:
-
-1. AI Response Evaluation
-2. Prompt Engineering
-3. Data Annotation & Classification
-4. Instruction Following Evaluation
-5. Factuality & Hallucination Detection
-6. Business & Finance Question Evaluation
-7. Accounting Reasoning Evaluation
-8. Financial Analysis Tasks
-9. Text Quality & Relevance Evaluation
-10. AI Output Improvement
+| # | Project | Focus |
+|---|---|---|
+| 01 | [AI Response Evaluation](projects/01-ai-response-evaluation.md) | Response quality assessment |
+| 02 | [Prompt Engineering](projects/02-prompt-engineering.md) | Prompt design and optimization |
+| 03 | [Data Annotation](projects/03-data-annotation.md) | Structured labeling |
+| 04 | [Business & Finance AI Training](projects/04-business-finance-ai-training.md) | Domain-specific AI training |
+| 05 | [AI Instruction Following](projects/05-ai-instruction-following.md) | Requirement and constraint checking |
+| 06 | [AI Bias & Fairness Evaluation](projects/06-ai-bias-and-fairness-evaluation.md) | Bias identification |
+| 07 | [AI Hallucination Detection](projects/07-ai-hallucination-detection.md) | Factuality verification |
+| 08 | [AI Business & Financial Analysis](projects/08-ai-business-financial-analysis.md) | Business and finance reasoning |
+| 09 | [AI Financial Data Annotation](projects/09-ai-financial-data-annotation.md) | Finance-focused annotation |
+| 10 | [AI Quality Assurance & Error Analysis](projects/10-ai-quality-assurance-error-analysis.md) | QA methodology |
+| 11 | [AI Training Workflow](projects/11-ai-training-workflow.md) | End-to-end workflow design |
+| 12 | [AI Data Quality Assurance](projects/12-ai-data-quality-assurance.md) | Dataset quality control |
 
 ## Professional Background
 
@@ -65,7 +78,7 @@ Projects will cover:
 
 **Bachelor's Degree in Accounting**  
 Islamic University of Gaza, Palestine  
-2009 – 2013
+2009–2013
 
 ## Languages
 
@@ -78,12 +91,16 @@ Islamic University of Gaza, Palestine
 Seeking opportunities in:
 
 - AI Trainer
-- Data Annotator
+- AI Data Annotator
 - AI Response Evaluator
-- Prompt Engineer
+- Prompt Engineering
 - AI Data Specialist
 - Business & Finance AI Training
 
+## Portfolio Development Roadmap
+
+See [PORTFOLIO-ROADMAP.md](PORTFOLIO-ROADMAP.md) for the quality standard and development plan used to strengthen this portfolio.
+
 ---
 
-*This portfolio is continuously being developed with practical AI training and evaluation projects.*
+*This repository is continuously developed through practical AI training, evaluation, annotation, and quality-assurance projects.*

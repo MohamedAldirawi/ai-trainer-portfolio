@@ -2,22 +2,27 @@
 
 ### AI Trainer | AI Data Annotation | Prompt Engineering | Business & Finance Domain Expert
 
-Business and finance professional building practical expertise in AI training, data annotation, prompt engineering, AI response evaluation, and quality assurance.
+Business and finance professional building practical, self-directed capability in AI training, data annotation, prompt engineering, AI response evaluation, and quality assurance.
 
-My portfolio combines a **Bachelor's degree in Accounting** and professional experience in accounting, auditing, financial analysis, and business operations with structured AI-training projects.
+My portfolio combines a **Bachelor's degree in Accounting** and professional experience in accounting, auditing, financial analysis, and business operations with structured AI-training exercises.
 
-> **Portfolio principle:** demonstrate practical capability and transparent project evidence rather than claim AI employment experience that has not been held.
+> **Portfolio principle:** demonstrate practical capability and transparent evidence rather than claim AI employment experience that has not been held.
 
----
+## Why This Portfolio
 
-## What I Do
+**Domain expertise + AI evaluation discipline.**
+
+I focus on evaluating and improving AI outputs where accounting, finance, business, and economic knowledge can materially affect the quality of the judgment.
+
+## What I Demonstrate
 
 - Evaluate AI-generated responses for accuracy, relevance, clarity, completeness, and instruction following.
 - Design and improve prompts using explicit objectives, context, constraints, and output requirements.
 - Perform structured data annotation and classification using consistent labeling criteria.
-- Identify factual errors, unsupported claims, hallucinations, and reasoning weaknesses.
-- Apply accounting, finance, business, and economics knowledge to AI evaluation tasks.
+- Detect factual errors, unsupported claims, hallucinations, and reasoning weaknesses.
+- Verify financial terminology, calculations, assumptions, and business logic independently.
 - Perform quality assurance and error analysis on AI-training outputs.
+- Convert evaluation decisions into structured feedback and corrected outputs.
 
 ## Core AI Skills
 
@@ -47,6 +52,20 @@ My portfolio combines a **Bachelor's degree in Accounting** and professional exp
 - Banking & Finance
 - Marketing
 - E-commerce
+
+## Evidence Layer
+
+The portfolio includes compact evidence artifacts in [`evidence/`](evidence/) showing how the methodologies are applied to structured examples.
+
+| Evidence | Demonstrates |
+|---|---|
+| [Response Evaluation Sample](evidence/response-evaluation-sample.md) | Rubric scoring, error annotation, correction, QA |
+| [Prompt Iteration Sample](evidence/prompt-iteration-sample.md) | Prompt refinement and comparative evaluation |
+| [Finance Evaluation Sample](evidence/finance-evaluation-sample.md) | Financial verification and assumption control |
+| [Financial Annotation Sample](evidence/financial-annotation-sample.md) | Finance-focused structured annotation |
+| [Data QA Sample](evidence/data-qa-sample.md) | Dataset defect review and readiness decisions |
+
+> All evidence artifacts are **simulated, self-directed portfolio exercises**. They are not presented as paid client work or professional AI employment.
 
 ## Portfolio Projects
 
@@ -103,4 +122,4 @@ See [PORTFOLIO-ROADMAP.md](PORTFOLIO-ROADMAP.md) for the quality standard and de
 
 ---
 
-*This repository is continuously developed through practical AI training, evaluation, annotation, and quality-assurance projects.*
+*This repository is continuously developed through practical AI training, evaluation, annotation, and quality-assurance exercises.*

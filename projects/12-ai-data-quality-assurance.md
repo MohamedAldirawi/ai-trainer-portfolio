@@ -2,103 +2,92 @@
 
 ## Project Overview
 
-This project demonstrates a structured approach to quality assurance for AI training data.
+This project demonstrates a structured quality-assurance process for AI training data before it is approved for downstream training or evaluation.
 
-The process focuses on identifying inaccurate, incomplete, inconsistent, ambiguous, or poorly structured data before it is used for AI training or evaluation.
+The workflow focuses on **accuracy, completeness, consistency, ambiguity, label correctness, evidence, and dataset readiness**.
+
+> **Portfolio transparency:** This is a simulated portfolio exercise created to demonstrate practical AI data-quality methodology. It is not presented as paid AI employment experience.
 
 ## Objective
 
-Establish a practical quality-control process for reviewing AI training data and improving its reliability, consistency, and usefulness.
+Establish a repeatable QA workflow that identifies data-quality problems, records evidence, applies corrective actions, and verifies that the corrected dataset satisfies predefined requirements.
 
-## Quality Assurance Process
+## Data Quality Dimensions
 
-### 1. Data Review
+| Dimension | QA Question |
+|---|---|
+| Accuracy | Is the information or label correct? |
+| Completeness | Is required information present? |
+| Consistency | Are similar cases treated the same way? |
+| Relevance | Does the item belong to the intended task? |
+| Clarity | Can the item be interpreted without unnecessary ambiguity? |
+| Format | Does it follow the required schema or structure? |
+| Label Validity | Does the assigned label match the annotation guidelines? |
+| Evidence | Can the QA decision be supported by the source item? |
 
-Review each data item for:
+## QA Workflow
 
-- Accuracy
-- Relevance
-- Completeness
-- Consistency
-- Clarity
-- Appropriate formatting
+**Sample → Inspect → Detect → Classify → Correct → Recheck → Approve/Reject**
 
-### 2. Error Identification
+### 1. Inspect
 
-Identify common data-quality problems, including:
+Review the source text, assigned label, required schema, and annotation guidelines before making a decision.
 
-- Incorrect information
-- Missing information
-- Duplicate entries
+### 2. Detect
+
+Identify:
+
+- Incorrect labels
+- Missing labels
+- Duplicate records
 - Contradictory information
-- Ambiguous wording
-- Irrelevant content
-- Formatting inconsistencies
+- Ambiguous examples
+- Irrelevant records
+- Formatting problems
+- Unsupported annotations
 
-### 3. Data Validation
+### 3. Classify
 
-Validate information against the available context and requirements.
+Record each confirmed issue using a consistent error taxonomy and severity level.
 
-Check whether:
+### 4. Correct
 
-- The data matches the intended task.
-- Labels or classifications are appropriate.
-- Instructions are followed consistently.
-- Important information has not been omitted.
-- The data can be interpreted without unnecessary ambiguity.
+Correct the record only when the available evidence and annotation guidelines support a clear correction. Otherwise, flag it for secondary review.
 
-### 4. Quality Improvement
+### 5. Recheck
 
-When an issue is identified:
+Review corrected records independently and confirm that the correction did not introduce another problem.
 
-1. Document the problem.
-2. Determine the cause.
-3. Correct the data when appropriate.
-4. Re-check the corrected version.
-5. Confirm consistency with the project requirements.
+### 6. Readiness Decision
 
-## Quality Checklist
+The dataset receives one of three statuses:
 
-- [ ] Data is relevant to the intended task.
-- [ ] Information is accurate.
-- [ ] Required information is complete.
-- [ ] Labels are consistent.
-- [ ] Duplicate or contradictory information is identified.
-- [ ] Ambiguous examples are reviewed.
-- [ ] Formatting is consistent.
-- [ ] Final data meets the defined quality requirements.
+- **Approved** — no unresolved material QA issues.
+- **Needs Revision** — correctable issues remain.
+- **Escalate** — the available evidence is insufficient for a reliable decision.
 
-## Skills Demonstrated
+## Annotation QA Schema
 
-- AI data quality assurance
-- Data validation
-- Data review
-- Error detection
-- Data consistency analysis
-- Annotation quality control
-- Structured quality assessment
-- Attention to detail
-- Analytical reasoning
-- AI training data preparation
+A practical QA record can use the following fields:
 
-## Portfolio Note
+| Field | Example |
+|---|---|
+| Record ID | 004 |
+| Assigned Label | Account |
+| Expected Label | Billing |
+| QA Status | Fail |
+| Error Type | Incorrect Label |
+| Severity | Medium |
+| Evidence | "get my money back" |
+| Rationale | Indicates a refund/payment intent |
+| Corrective Action | Relabel as Billing |
+| Reviewer Confidence | High |
 
-This project demonstrates a practical quality-assurance methodology for AI training data. It showcases the ability to systematically review data, identify quality issues, apply corrective actions, and maintain consistent standards for AI training and evaluation workflows.
+## Practical Case Study — Customer Support Dataset
 
+### Sample Dataset
 
----
-
-## Practical Example
-
-### AI Data Quality Assurance
-
-#### Objective
-
-Evaluate a small annotated dataset before using it for AI training to identify missing labels, inconsistent annotations, and unclear records.
-
-#### Sample Dataset
-
-| ID | Text | Assigned Label | QA Finding |
+| ID | Customer Statement | Assigned Label | QA Finding |
 |---|---|---|---|
 | 1 | I was charged twice for the same transaction. | Billing | ✅ Valid |
 | 2 | I cannot access my account because I forgot my password. | Account | ✅ Valid |
@@ -107,41 +96,78 @@ Evaluate a small annotated dataset before using it for AI training to identify m
 | 5 | My invoice shows an unexpected charge. | Billing | ✅ Valid |
 | 6 | The payment issue is not clear from the customer's message. | Billing | ⚠️ Ambiguous |
 
-#### Quality Issues Identified
+### QA Analysis
 
-**Issue 1 — Incorrect Annotation**
+**Record 4** is incorrectly labeled. The statement expresses a refund/payment intent, so it should be classified as **Billing** under the defined guidelines.
 
-Record 4 is labeled as **Account**, but the primary intent is a **refund request**, which should be classified under **Billing** according to the annotation guidelines.
+**Record 6** is ambiguous. The available information does not establish the precise issue with enough confidence, so it should be flagged rather than confidently relabeled without evidence.
 
-**Issue 2 — Ambiguous Record**
+### QA Decision Log
 
-Record 6 contains insufficient information to determine the exact nature of the payment issue with high confidence. It should be flagged for clarification or secondary review.
+| Record | Decision | Reason |
+|---|---|---|
+| 4 | Relabel | Evidence supports Billing |
+| 6 | Escalate | Insufficient information |
 
-#### QA Checks
-
-| Quality Dimension | Result |
-|---|---|
-| Label Consistency | ⚠️ Needs correction |
-| Missing Information | ⚠️ Record 6 requires review |
-| Annotation Accuracy | ❌ Record 4 requires relabeling |
-| Label Guideline Compliance | ⚠️ Needs correction |
-| Dataset Readiness | ❌ Not ready |
-
-#### Corrective Actions
+### Corrective Actions
 
 1. Relabel Record 4 from **Account** to **Billing**.
-2. Flag Record 6 for secondary review.
-3. Confirm that all records follow the same annotation guidelines.
-4. Recheck the corrected dataset before training use.
+2. Flag Record 6 for secondary review or clarification.
+3. Recheck the remaining records against the same guidelines.
+4. Run a final readiness review.
 
-#### Final QA Status
+## Quality Metrics
 
-**Status: Needs Revision**
+A production-style QA process can track:
 
-The dataset should not be used for AI training until the identified annotation issues are corrected and the ambiguous record is resolved.
+- **Annotation Accuracy** — proportion of reviewed records with correct labels.
+- **Defect Rate** — proportion containing confirmed quality defects.
+- **Ambiguity Rate** — proportion requiring escalation or clarification.
+- **Correction Rate** — proportion requiring changes after QA.
+- **Readiness Rate** — proportion approved after final review.
 
-#### Result
+For a real dataset, these metrics should be calculated from the actual review sample rather than invented.
 
-This example demonstrates how data quality assurance can identify annotation errors, ambiguous records, and guideline inconsistencies before labeled data is used in an AI training workflow.
+## Error Taxonomy
 
-> **Note:** This is a simulated data-quality-assurance example created to demonstrate a structured AI data validation workflow.
+| Error Type | Example |
+|---|---|
+| Incorrect Label | Billing item labeled Account |
+| Missing Label | Record has no classification |
+| Ambiguous Data | Insufficient information for confident labeling |
+| Inconsistent Label | Similar records receive different labels |
+| Irrelevant Data | Record does not belong to the task |
+| Formatting Error | Required schema is not followed |
+| Unsupported Annotation | Label cannot be justified from the source |
+
+## Quality Gates
+
+Before approval, verify:
+
+- [ ] Every reviewed record has a valid label or documented escalation.
+- [ ] Labels follow the annotation guidelines.
+- [ ] Material errors have been corrected.
+- [ ] Ambiguous records are not falsely presented as certain.
+- [ ] Corrections have been rechecked.
+- [ ] The dataset meets the required schema.
+
+## Skills Demonstrated
+
+- AI Data Quality Assurance
+- Data Validation
+- Annotation QA
+- Error Detection
+- Data Consistency Analysis
+- Ambiguity Handling
+- Label Verification
+- Evidence-Based Review
+- Quality Control
+- AI Training Data Preparation
+
+## Professional Relevance
+
+This project is relevant to AI Data Annotator, AI Trainer, AI Response Evaluator, Data Quality Specialist, and AI Quality Assurance roles.
+
+## Conclusion
+
+High-quality AI training data requires more than assigning labels. A reliable QA process must verify the source evidence, apply consistent guidelines, identify ambiguity, document errors, perform corrections carefully, and independently recheck the final dataset before approval.

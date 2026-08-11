@@ -14,6 +14,26 @@ My portfolio combines a **Bachelor's degree in Accounting** and professional exp
 
 I focus on evaluating and improving AI outputs where accounting, finance, business, and economic knowledge can materially affect the quality of the judgment.
 
+## Featured Work — Start Here
+
+If you only have a minute, start with these two projects:
+
+### ⭐ 01 — Business & Finance AI Training
+
+**Why it matters:** demonstrates the portfolio's strongest differentiator — combining accounting and finance domain knowledge with structured AI response evaluation.
+
+**What you will see:** financial accuracy checks, numerical verification, terminology review, assumption control, error taxonomy, scoring, and corrected outputs.
+
+→ [View Project 04](projects/04-business-finance-ai-training.md) · [View Finance Evidence](evidence/finance-evaluation-sample.md)
+
+### ⭐ 02 — AI Response Evaluation
+
+**Why it matters:** demonstrates the core evaluation workflow expected in AI Trainer and AI Response Evaluator work.
+
+**What you will see:** explicit rubrics, scoring, error classification, evidence-based feedback, correction, and independent quality checks.
+
+→ [View Project 01](projects/01-ai-response-evaluation.md) · [View Evaluation Evidence](evidence/response-evaluation-sample.md)
+
 ## What I Demonstrate
 
 - Evaluate AI-generated responses for accuracy, relevance, clarity, completeness, and instruction following.

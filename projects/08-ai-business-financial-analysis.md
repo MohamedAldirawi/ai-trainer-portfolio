@@ -1,137 +1,202 @@
-# AI Business & Financial Analysis
+# AI-Assisted Financial Analysis & Decision Support Evaluation
 
 ## Project Overview
 
-This project demonstrates how accounting and financial-analysis knowledge can be applied to AI evaluation tasks involving calculations, financial relationships, business reasoning, assumptions, and interpretation.
+This project demonstrates how accounting and financial-analysis knowledge can be applied to evaluating AI-generated **financial analysis, business interpretation, trend assessment, and decision-support recommendations**.
 
-The evaluator does not only check whether an answer contains the correct number. The workflow verifies the calculation, accounting relationship, assumptions, interpretation, and alignment with the user's request.
+Unlike Project 04, which focuses on **domain-aware AI training and response evaluation**, this project focuses on whether an AI can turn financial data into a sound analytical conclusion without confusing metrics, overstating trends, ignoring assumptions, or making unsupported business recommendations.
 
-> **Portfolio status:** Simulated self-directed case study demonstrating domain-aware AI evaluation.
+> **Portfolio status:** Simulated self-directed case study demonstrating domain-aware AI-assisted financial analysis and decision-support evaluation.
 
 ## Objective
 
-Evaluate whether AI-generated business and financial analysis is:
+Evaluate whether AI-generated financial analysis is:
 
 - Numerically accurate
-- Financially and logically sound
-- Relevant to the business question
-- Complete enough for the requested task
+- Correct in its financial metrics and ratios
+- Consistent with the direction of the underlying data
 - Clear about assumptions and limitations
+- Appropriate in its business interpretation
+- Proportionate in its recommendations
+- Useful for decision support without overstating certainty
 
 ## Analytical Workflow
 
-1. Extract the financial inputs.
-2. Identify the required metric or accounting relationship.
-3. Perform the calculation independently.
-4. Compare the AI calculation with the verified result.
-5. Check terminology and accounting logic.
-6. Review assumptions and missing information.
-7. Evaluate the business interpretation.
-8. Record errors and recommend corrections.
+**Financial Inputs → Metric Verification → Trend Analysis → AI Interpretation → Assumption Check → Decision-Support Review → Final Recommendation**
+
+1. Extract and validate the financial inputs.
+2. Calculate the required metrics independently.
+3. Compare periods or scenarios to identify trends.
+4. Check whether the AI interpretation matches the verified direction and magnitude of change.
+5. Review assumptions, missing context, and possible alternative explanations.
+6. Assess whether recommendations logically follow from the evidence.
+7. Identify overconfident or unsupported conclusions.
+8. Produce a qualified decision-support conclusion.
 
 ## Core Evaluation Rubric
 
 | Criterion | Weight | What is checked |
 |---|---:|---|
-| Numerical accuracy | 25% | Arithmetic and formulas |
-| Financial logic | 20% | Correct accounting relationships |
-| Interpretation | 20% | Conclusion follows from results |
-| Relevance | 15% | Answers the requested business question |
-| Completeness | 10% | Important inputs and limitations considered |
-| Clarity | 10% | Explanation is understandable |
+| Metric accuracy | 20% | Ratios, margins, growth rates, and derived metrics |
+| Trend accuracy | 20% | Direction and magnitude of changes |
+| Financial logic | 15% | Relationships among revenue, costs, profit, and ratios |
+| Interpretation | 20% | Conclusions follow from the evidence |
+| Assumption control | 10% | Limitations and missing context are identified |
+| Decision quality | 10% | Recommendation is proportionate to available evidence |
+| Clarity | 5% | Analysis is understandable and decision-useful |
 
-## Practical Case Study — Profitability Analysis
+## Case Study — Profitability Trend & Decision Support
 
 ### User Request
 
-> "A company generated $120,000 in revenue. COGS was $70,000, operating expenses were $30,000, and interest and taxes totaled $5,000. Calculate gross profit and net profit and explain the difference."
+> "A company had the following results. Explain what changed, calculate the key profitability metrics, identify the main concern, and recommend what management should investigate next."
 
-### AI Response
+| Metric | Year 1 | Year 2 |
+|---|---:|---:|
+| Revenue | $120,000 | $150,000 |
+| COGS | $70,000 | $100,000 |
+| Operating Expenses | $30,000 | $35,000 |
+| Interest & Taxes | $5,000 | $6,000 |
 
-> "Gross profit is $50,000 and net profit is $15,000. Gross profit is revenue minus COGS, while net profit is what remains after operating expenses, interest, and taxes."
+### Independent Analysis
 
-### Independent Verification
+| Metric | Year 1 | Year 2 | Change |
+|---|---:|---:|---:|
+| Gross Profit | $50,000 | $50,000 | $0 |
+| Gross Margin | 41.7% | 33.3% | -8.4 pp |
+| Operating Profit | $20,000 | $15,000 | -$5,000 |
+| Operating Margin | 16.7% | 10.0% | -6.7 pp |
+| Net Profit | $15,000 | $9,000 | -$6,000 |
+| Net Margin | 12.5% | 6.0% | -6.5 pp |
 
-| Metric | Calculation | Verified result |
-|---|---|---:|
-| Gross profit | $120,000 − $70,000 | **$50,000** |
-| Net profit | $50,000 − $30,000 − $5,000 | **$15,000** |
-| Gross margin | $50,000 ÷ $120,000 | **41.7%** |
-| Net margin | $15,000 ÷ $120,000 | **12.5%** |
+### Interpretation
+
+Revenue increased by **25%**, but gross profit remained flat because COGS increased faster than revenue. Gross margin therefore fell materially from **41.7% to 33.3%**.
+
+Operating expenses also increased, reducing operating profit from **$20,000 to $15,000**. Net profit fell from **$15,000 to $9,000**, despite the higher revenue.
+
+### Decision-Support Conclusion
+
+The primary concern is **margin compression rather than insufficient revenue growth**.
+
+Management should investigate:
+
+1. Product or service pricing changes.
+2. Supplier and input-cost increases.
+3. Product mix and lower-margin sales.
+4. Operational efficiency and overhead growth.
+5. Whether revenue growth is being achieved at an economically attractive margin.
+
+The recommendation is deliberately investigative rather than prescriptive because the dataset does not provide enough information to determine the exact cause of the margin decline.
+
+## Case Study — AI Interpretation Error
+
+### AI-Generated Analysis
+
+> "Revenue increased by 25%, so the company is performing better and management should continue expanding sales aggressively."
 
 ### Evaluation
 
-| Criterion | Result |
-|---|---|
-| Numerical accuracy | Pass |
-| Financial logic | Pass |
-| Interpretation | Pass |
-| Relevance | Pass |
-| Completeness | Pass |
-| Clarity | Pass |
+| Check | Result | Reason |
+|---|---|---|
+| Revenue trend | Pass | Revenue increased 25%. |
+| Gross-profit trend | Fail | Gross profit remained flat. |
+| Margin trend | Fail | Gross margin fell from 41.7% to 33.3%. |
+| Net-profit trend | Fail | Net profit fell from $15,000 to $9,000. |
+| Decision quality | Fail | Expansion recommendation ignores deteriorating profitability. |
+| Assumption control | Fail | No investigation of the cause of margin compression. |
 
-**Overall assessment: 5/5 — Pass**
+**Overall decision-support assessment: Needs revision.**
 
-## Practical Case Study — Inventory / COGS
+### Improved AI-Assisted Conclusion
 
-### Inputs
+> "Revenue increased by 25%, but profitability deteriorated. Gross profit remained flat while gross margin declined from 41.7% to 33.3%, and net profit fell from $15,000 to $9,000. Before pursuing aggressive sales expansion, management should investigate pricing, COGS, product mix, and operating-cost changes to determine why additional revenue is producing lower returns."
 
-- Opening inventory: $80,000
-- Purchases: $250,000
-- Closing inventory: $70,000
+## Case Study — Ratio Interpretation
 
-### Verification
+A second evaluation task can test whether AI interprets ratios correctly:
 
-**COGS = Opening Inventory + Purchases − Closing Inventory**
+| Metric | Period A | Period B |
+|---|---:|---:|
+| Gross Margin | 40% | 35% |
+| Net Margin | 12% | 10% |
+| Revenue Growth | — | 20% |
 
-**COGS = $80,000 + $250,000 − $70,000 = $260,000**
+### Evaluation Question
 
-### AI Evaluation Check
+> "Is the 20% revenue growth necessarily evidence that profitability improved?"
 
-An AI answer should use the correct inventory relationship and should not confuse purchases with COGS.
+**Correct decision:** No.
 
-## Common AI Financial Errors
+Revenue growth and profitability are different dimensions. The lower gross and net margins indicate that the business generated more revenue but retained a smaller proportion of that revenue as gross and net profit.
+
+This demonstrates why an AI financial-analysis evaluator must distinguish **growth metrics** from **profitability metrics** rather than treating one positive indicator as proof of overall improvement.
+
+## Assumption & Limitation Control
+
+A responsible financial-analysis evaluator should identify missing information such as:
+
+- Reporting period and comparability
+- Currency and inflation effects
+- Product or customer mix
+- Pricing changes
+- One-off costs or revenues
+- Supplier/input-cost changes
+- Changes in accounting treatment
+- Working-capital effects
+- Industry benchmarks
+- Management's actual decision objective
+
+When information is insufficient, the evaluator should **state the limitation rather than invent an explanation**.
+
+## Decision-Support Quality Rules
+
+A strong AI-generated recommendation should:
+
+- Use verified metrics.
+- Distinguish facts from interpretation.
+- Explain the evidence supporting the recommendation.
+- Consider plausible alternative explanations.
+- Avoid presenting correlation as causation.
+- Match the strength of the recommendation to the strength of the evidence.
+- Identify what additional information should be reviewed before a high-impact decision.
+
+## Common AI Financial-Analysis Errors
 
 | Error | Example | Evaluation response |
 |---|---|---|
-| Calculation error | Wrong subtraction | Recalculate independently |
-| Formula error | Wrong numerator/denominator | Verify formula |
-| Concept confusion | Revenue treated as profit | Check definitions |
-| Ratio confusion | Gross margin vs net margin | Verify metric definition |
-| Cash/profit confusion | Cash movement treated as profit | Check accounting context |
-| Unsupported conclusion | Profit increase means business is healthier | Request supporting evidence |
-| Missing assumption | No period or currency specified | Flag limitation |
+| Metric error | Net margin calculated from gross profit | Recalculate independently |
+| Trend error | Calls a declining margin an improvement | Compare periods explicitly |
+| Ratio confusion | Gross margin treated as net margin | Verify metric definition |
+| Growth fallacy | Revenue growth treated as proof of better performance | Evaluate profitability separately |
+| Causal overreach | Claims higher sales caused profit decline without evidence | Separate observation from hypothesis |
+| Unsupported recommendation | Advises expansion despite margin deterioration | Require evidence-based decision logic |
+| Missing assumption | Ignores inflation or product mix | Flag limitation |
+| Overconfidence | Presents one explanation as certain | Qualify and identify alternatives |
 
-## Assumption Control
+## Structured Evidence Artifact
 
-A domain-aware evaluator should identify assumptions such as:
-
-- Reporting period
-- Currency
-- Whether figures are totals or averages
-- Whether taxes and interest are included
-- Whether the requested profit measure is gross, operating, or net
-- Whether sufficient data is available for a reliable conclusion
-
-When the information is insufficient, the evaluator should **state the limitation rather than inventing an assumption silently**.
-
-## Error Analysis Workflow
-
-**Input → Formula/Rule → Independent Calculation → AI Comparison → Domain Check → Interpretation Check → Final Decision**
+The companion artifact [`artifacts/financial-analysis.csv`](../artifacts/financial-analysis.csv) records verified metrics and analysis checks. It now covers **metric calculation, trend direction, interpretation risk, and decision-support review**, not only arithmetic verification.
 
 ## Skills Demonstrated
 
-- Accounting
 - Financial Analysis
-- Business Analysis
+- Profitability Analysis
+- Financial Ratio Analysis
+- Trend Analysis
+- Business Interpretation
+- Decision-Support Evaluation
 - Numerical Reasoning
+- Assumption Analysis
 - AI Response Evaluation
 - Domain-Aware Quality Assurance
-- Error Detection
-- Assumption Analysis
-- Data Interpretation
+- Evidence-Based Recommendations
 - Structured Reasoning
 
 ## Recruiter Takeaway
 
-This project demonstrates a practical combination of **finance/accounting domain expertise and AI evaluation methodology**. The strongest evidence is the independent verification step: the evaluator checks the AI's calculations and reasoning instead of simply accepting a plausible-looking answer.
+This project demonstrates a distinct capability from basic AI response evaluation: the ability to assess whether AI can **interpret financial information, identify meaningful trends, control assumptions, and produce proportionate business recommendations** rather than simply generate correct calculations.
+
+## Portfolio Integrity Note
+
+This is a **simulated portfolio case study created through self-directed practice**. It demonstrates financial-analysis and AI-evaluation capability and does not claim professional AI employment or client financial-advisory work.

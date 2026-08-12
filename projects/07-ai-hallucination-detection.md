@@ -4,7 +4,7 @@
 
 This project demonstrates a structured workflow for identifying factual errors, unsupported claims, numerical mistakes, fabricated information, and overconfident statements in AI-generated responses.
 
-The focus is not simply to label a response as "wrong." The evaluator must identify the specific claim, verify it, classify the error, assess severity, and produce a defensible correction.
+The focus is not simply to label a response as "wrong." The evaluator must identify the specific claim, verify it against evidence, classify the error, assess severity, document uncertainty, and produce a defensible correction.
 
 > **Portfolio status:** Simulated self-directed case study demonstrating an AI evaluation workflow.
 
@@ -38,24 +38,41 @@ Build a repeatable fact-checking workflow that separates:
 |---|---|---|---|
 | Claim identification | Missed claims | Some claims identified | All material claims identified |
 | Verification | Not verified | Partially verified | Material claims independently verified |
+| Evidence trail | Missing | Incomplete | Claim, evidence, and decision are traceable |
 | Error classification | Incorrect/missing | Partially correct | Correct and specific |
 | Severity | Unsupported | Plausible | Evidence-based |
 | Correction | Missing | Partially correct | Accurate and appropriately qualified |
 
-**Maximum score: 10 points.**
+**Maximum score: 12 points.**
 
 ## Fact-Checking Workflow
 
 1. Extract each material factual claim.
 2. Separate facts from opinions and interpretations.
 3. Identify which claims require external verification.
-4. Verify important claims using authoritative or otherwise reliable sources.
-5. Recalculate numerical claims independently.
-6. Check entities, dates, definitions, and relationships.
-7. Record evidence and uncertainty.
-8. Classify each confirmed issue.
-9. Assign severity based on potential impact.
-10. Produce a corrected response without introducing new unsupported claims.
+4. Select an authoritative or otherwise reliable source appropriate to the claim.
+5. Record the source or evidence used for the decision.
+6. Compare the claim against the evidence and record the verification status.
+7. Recalculate numerical claims independently.
+8. Check entities, dates, definitions, and relationships.
+9. Record uncertainty where the available evidence is insufficient.
+10. Classify each confirmed issue and assign severity.
+11. Produce a corrected response without introducing new unsupported claims.
+12. Re-check the correction against the same evidence.
+
+## Evidence Trail Standard
+
+Every material factual claim should be traceable through:
+
+**Claim → Evidence / Source → Verification Status → Error Classification → Severity → Decision → Correction → Re-check**
+
+The evaluator should distinguish three states:
+
+- **False** — reliable evidence contradicts the claim.
+- **Supported** — reliable evidence supports the claim.
+- **Unsupported / Unverified** — available evidence is insufficient to confirm the claim.
+
+An unsupported claim should not automatically be called a hallucination. The evidence status must justify the classification.
 
 ## Practical Case Study — Numerical Hallucination
 
@@ -69,11 +86,11 @@ Build a repeatable fact-checking workflow that separates:
 
 ### Claim Verification
 
-| Claim | Verification | Result |
-|---|---|---|
-| Revenue = $100,000 | Given by user | ✅ |
-| Expenses = $70,000 | Given by user | ✅ |
-| Profit = $40,000 | $100,000 − $70,000 | ❌ |
+| Claim | Evidence | Verification | Result |
+|---|---|---|---|
+| Revenue = $100,000 | User-provided input | Directly provided | Supported |
+| Expenses = $70,000 | User-provided input | Directly provided | Supported |
+| Profit = $40,000 | Independent calculation: $100,000 − $70,000 | Contradicted by calculation | False |
 
 ### Correct Calculation
 
@@ -87,13 +104,13 @@ Build a repeatable fact-checking workflow that separates:
 |---|---|
 | Error type | Numerical / calculation error |
 | Severity | High |
-| Evidence | User-provided figures |
+| Evidence | User-provided figures and independent calculation |
 | Correct result | $30,000 |
 | Required action | Replace incorrect calculation |
 
-### Corrected Response
+### Re-check
 
-> "The company's profit is **$30,000**, calculated as $100,000 in revenue minus $70,000 in expenses."
+The corrected response is recalculated independently and matches the provided inputs: **$30,000**.
 
 ## Practical Case Study — Unsupported Generalization
 
@@ -101,31 +118,57 @@ Build a repeatable fact-checking workflow that separates:
 
 > "Companies that use AI always reduce operating costs."
 
-### Evaluation
+### Evidence Assessment
 
-**Status:** Unsupported claim
+No evidence or source is provided to support the absolute claim. The word **"always"** makes the statement categorical.
 
-The word **"always"** makes the statement absolute. Whether AI reduces costs depends on implementation costs, labor structure, technology costs, process changes, industry, and the specific use case.
+**Verification status:** Unsupported / Unverified
+
+**Classification:** Unsupported generalization, not a confirmed factual hallucination.
 
 ### Better Response
 
 > "AI can reduce certain operating costs in some situations, but the financial impact depends on implementation costs, the use case, and how the technology changes existing processes."
 
-## Practical Case Study — Factual Verification
+### Re-check
+
+The revised response removes the unsupported absolute claim and uses appropriately qualified language. It does not assert a universal outcome.
+
+## Practical Case Study — Factual Verification with Source Evidence
 
 ### AI Response
 
 > "The World Health Organization was founded in 1950 and is headquartered in New York City."
 
-### Evaluation
+### Verification Record
 
-The statement contains material factual errors. A professional evaluator should verify both claims against authoritative information before accepting or correcting them.
+| Claim | Evidence / Source | Verification | Decision |
+|---|---|---|---|
+| WHO founded in 1950 | World Health Organization official institutional information | Contradicted by authoritative information | False |
+| WHO headquartered in New York City | World Health Organization official institutional information | Contradicted by authoritative information | False |
 
 **Classification:** Factual hallucination
 
 **Severity:** High
 
-The key lesson is that plausible wording and confident tone are not evidence of accuracy.
+### Corrected Response
+
+> "The World Health Organization (WHO) was established in 1948 and is headquartered in Geneva, Switzerland."
+
+### Evidence Rule
+
+For a real-world evaluation, the reviewer should retain the exact source URL, access date, and relevant evidence excerpt in the evaluation record. The portfolio artifact therefore records the **source-evidence requirement** rather than pretending that a source was consulted when it was not.
+
+## Structured Evidence Record
+
+The companion artifact [`artifacts/hallucination-fact-check.csv`](../artifacts/hallucination-fact-check.csv) records claim-level verification decisions. Each row should answer:
+
+- What exactly was claimed?
+- What evidence was used?
+- Was the claim supported, false, or unsupported?
+- What error category applies?
+- How severe is the issue?
+- What correction is justified?
 
 ## Quality-Control Rules
 
@@ -135,7 +178,8 @@ The key lesson is that plausible wording and confident tone are not evidence of 
 - Distinguish an unverified claim from a confirmed false claim.
 - Record the evidence supporting each correction.
 - Avoid replacing one unsupported claim with another.
-- Re-check the corrected response before finalizing it.
+- Re-check the corrected response against the same evidence.
+- Do not claim a source was consulted unless it actually was.
 
 ## Business & Finance Application
 
@@ -148,14 +192,19 @@ A small numerical or terminology error can materially change a financial conclus
 - AI Response Evaluation
 - Hallucination Detection
 - Fact Checking
+- Claim Verification
+- Evidence Traceability
 - Error Classification
 - Numerical Verification
 - Evidence-Based Reasoning
 - Business & Finance Domain Evaluation
 - Quality Assurance
-- Critical Thinking
 - Confidence Calibration
 
 ## Recruiter Takeaway
 
-This project demonstrates the ability to turn a vague concern such as "the AI may be hallucinating" into a **repeatable evaluation workflow with claim extraction, verification, error taxonomy, severity assessment, correction, and quality control**.
+This project demonstrates the ability to turn a vague concern such as "the AI may be hallucinating" into a **traceable evaluation workflow: claim extraction, evidence selection, verification, classification, severity assessment, correction, and re-checking**.
+
+## Portfolio Integrity Note
+
+This is a **simulated portfolio case study created through self-directed practice**. It demonstrates a fact-checking methodology and does not claim professional AI fact-checking employment.

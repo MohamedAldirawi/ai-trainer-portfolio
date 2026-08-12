@@ -1,0 +1,7 @@
+case_id,criterion,score,max_score,decision,feedback
+RE-001,Accuracy,5,5,Pass,"Definition and arithmetic are correct"
+RE-001,Relevance,5,5,Pass,"Directly answers the request"
+RE-001,Instruction Following,5,5,Pass,"Simple language and one example provided"
+RE-001,Clarity,5,5,Pass,"Clear and concise"
+RE-001,Completeness,4,5,Improve,"Revenue-before-expenses distinction could be more explicit"
+RE-001,Final Score,24,25,Strong,"Improved response produced and rechecked"

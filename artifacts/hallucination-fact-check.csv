@@ -1,0 +1,4 @@
+claim_id,claim,verification_status,error_type,severity,correction
+HC-001,"Profit is $40,000 when revenue is $100,000 and expenses are $70,000",False,"Numerical / calculation error",High,"Profit is $30,000"
+HC-002,"Companies that use AI always reduce operating costs",Unsupported,"Unsupported generalization",Medium,"Impact depends on implementation, use case, and process changes"
+HC-003,"WHO was founded in 1950 and headquartered in New York City",False,"Factual hallucination",High,"Verify both claims against authoritative sources before correction"

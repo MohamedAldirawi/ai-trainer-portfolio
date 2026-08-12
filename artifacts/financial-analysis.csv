@@ -1,6 +1,11 @@
-metric,input_or_formula,verified_result,check
-Gross Profit,"120000 - 70000",50000,Pass
-Net Profit,"50000 - 30000 - 5000",15000,Pass
-Gross Margin,"50000 / 120000 * 100",41.7,Pass
-Net Margin,"15000 / 120000 * 100",12.5,Pass
-COGS,"80000 + 250000 - 70000",260000,Pass
+analysis_id,metric_or_check,input_or_formula,verified_result,trend_or_risk,decision_support_check
+FA-001,Gross Profit Year 1,"120000 - 70000",50000,Base period,Pass
+FA-002,Gross Profit Year 2,"150000 - 100000",50000,Flat despite revenue growth,Flag
+FA-003,Gross Margin Year 1,"50000 / 120000 * 100",41.7,"Baseline",Pass
+FA-004,Gross Margin Year 2,"50000 / 150000 * 100",33.3,"Declined 8.4 percentage points",Flag
+FA-005,Operating Profit Year 1,"50000 - 30000",20000,"Baseline",Pass
+FA-006,Operating Profit Year 2,"50000 - 35000",15000,"Declined $5,000",Flag
+FA-007,Net Profit Year 1,"20000 - 5000",15000,"Baseline",Pass
+FA-008,Net Profit Year 2,"15000 - 6000",9000,"Declined $6,000",Flag
+FA-009,Revenue Growth,"(150000 - 120000) / 120000 * 100",25,"Revenue increased",Pass
+FA-010,Decision Support,"Investigate pricing, COGS, mix, and operating costs","Margin compression is the primary concern","Avoid causal overreach","Pass"

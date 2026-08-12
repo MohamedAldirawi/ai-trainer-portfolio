@@ -1,6 +1,9 @@
 case_id,criterion,score,max_score,finding,action
-FIN-001,Financial accuracy,5,5,"Definitions correct","Keep"
+FIN-001,Financial accuracy,5,5,"Core definitions correct","Keep"
 FIN-001,Terminology,5,5,"Accounting terminology appropriate","Keep"
+FIN-001,Relevance,5,5,"Directly answers the question","Keep"
 FIN-001,Completeness,3,5,"Required numerical example missing","Add example"
 FIN-001,Instruction following,4,5,"Explicit example requirement missed","Revise response"
 FIN-001,Clarity,5,5,"Concise and understandable","Keep"
+FIN-001,Total,27,30,"Response is financially correct but misses the requested numerical example","Revise response"
+FIN-001,Corrected Output,30,30,"Numerical example added and instruction satisfied","Approve"

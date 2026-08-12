@@ -1,0 +1,7 @@
+item_id,source_text,primary_label,value,evidence,confidence,ambiguous
+F01,"The company sold products for $5,000.",Revenue,5000,"revenue from product sales",High,No
+F02,"The company paid $1,200 for monthly office rent.",Operating Expense,1200,"monthly office rent",High,No
+F03,"The company purchased equipment for $3,000 for business use.",Asset,3000,"purchased equipment for business use",High,No
+F04,"The company received a bank loan of $20,000.",Liability,20000,"bank loan",High,No
+F05,"The company owes suppliers $35,000 for inventory purchased on credit.",Accounts Payable,35000,"owes suppliers",High,No
+F06,"The company spent $3,000 on a computer system.",Needs Review,3000,"classification depends on accounting context",Medium,Yes

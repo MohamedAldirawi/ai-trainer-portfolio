@@ -65,8 +65,13 @@ The resume and LinkedIn should describe the candidate's real accounting/business
   - Accounting/auditing work including invoice entry in Excel, account review, and tax-related work.
 - **Tarbush Restaurant, Malaysia | 2019–2025**
   - Accounting/business operations including inventory movement, sales invoices, manufacturing quantities, sales comparison, and investigation of variances.
-- **Al-Baraka / Berkat Madinah, Malaysia**
-  - Purchases/accounting role; use the finalized resume wording and confirmed employment period consistently across resume and LinkedIn.
+- **Purchase Accountant — Berkat Madinah, Malaysia | 2025–2026**
+  - Managed purchase accounting activities and maintained accurate purchase records.
+  - Reviewed supplier invoices and purchase transactions for accuracy and completeness.
+  - Coordinated with suppliers regarding invoices, transactions, and related purchasing matters.
+  - Used Microsoft Excel, Gross Synergy, and AutoCount for transaction processing and accounting records.
+  - Maintained organized transaction records and supported reliable financial data management.
+  - Identified discrepancies and supported corrective action to improve data accuracy and reliability.
 
 > Do not present any of the above as AI employment. AI capability should be represented through the self-directed portfolio, training, courses, and practical exercises.
 

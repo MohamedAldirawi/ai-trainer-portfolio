@@ -142,4 +142,4 @@ See [PORTFOLIO-ROADMAP.md](PORTFOLIO-ROADMAP.md) for the quality standard and de
 
 ---
 
-*This repository is continuously developed through practical AI training, evaluation, annotation, and quality-assurance exercises.*
+*This portfolio presents practical, self-directed work in AI training, evaluation, data annotation, prompt engineering, and quality assurance.*

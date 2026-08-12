@@ -24,7 +24,7 @@ If you only have a minute, start with these two projects:
 
 **What you will see:** financial accuracy checks, numerical verification, terminology review, assumption control, error taxonomy, scoring, and corrected outputs.
 
-→ [View Project 04](projects/04-business-finance-ai-training.md) · [View Finance Evidence](evidence/finance-evaluation-sample.md)
+→ [View Project 04](projects/04-business-finance-ai-training.md) · [View Finance Evidence](evidence/finance-evaluation-sample.md) · [View Financial Evaluation Artifact](artifacts/finance-evaluation.csv)
 
 ### ⭐ 02 — AI Response Evaluation
 
@@ -32,7 +32,7 @@ If you only have a minute, start with these two projects:
 
 **What you will see:** explicit rubrics, scoring, error classification, evidence-based feedback, correction, and independent quality checks.
 
-→ [View Project 01](projects/01-ai-response-evaluation.md) · [View Evaluation Evidence](evidence/response-evaluation-sample.md)
+→ [View Project 01](projects/01-ai-response-evaluation.md) · [View Evaluation Evidence](evidence/response-evaluation-sample.md) · [View Evaluation Artifact](artifacts/response-evaluation.csv)
 
 ## What I Demonstrate
 
@@ -86,6 +86,14 @@ The portfolio includes compact evidence artifacts in [`evidence/`](evidence/) sh
 | [Data QA Sample](evidence/data-qa-sample.md) | Dataset defect review and readiness decisions |
 
 > All evidence artifacts are **simulated, self-directed portfolio exercises**. They are not presented as paid client work or professional AI employment.
+
+## Hands-On Artifacts
+
+The case studies are supported by inspectable structured artifacts in [`artifacts/`](artifacts/). These include evaluation records, prompt iterations, annotation tables, financial calculations, instruction-following checks, fairness labels, fact-check records, QA logs, workflow definitions, and dataset-quality decisions.
+
+> All hands-on artifacts are **simulated, self-directed portfolio exercises**. They are not presented as paid client work, production datasets, or professional AI employment.
+
+[View the complete Hands-On Artifacts Index](artifacts/README.md)
 
 ## Portfolio Projects
 

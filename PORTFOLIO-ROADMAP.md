@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This repository is a practical portfolio for **Mohammed A.M. Aldirawi**, targeting AI Trainer, AI Data Annotation, AI Response Evaluation, Prompt Engineering, and Business & Finance AI training opportunities.
+This document defines the quality standard and structure of the completed portfolio for **Mohammed A.M. Aldirawi**, targeting AI Trainer, AI Data Annotation, AI Response Evaluation, Prompt Engineering, and Business & Finance AI training opportunities.
 
-The portfolio is designed to show **evidence of capability**, not simply a list of AI keywords. Each project should demonstrate a repeatable workflow, clear evaluation criteria, structured reasoning, and measurable or auditable outputs.
+The portfolio is designed to show **evidence of capability**, not simply a list of AI keywords. Each project demonstrates a repeatable workflow, clear evaluation criteria, structured reasoning, and auditable outputs.
 
 ## Professional Positioning
 
@@ -23,7 +23,7 @@ The portfolio combines:
 
 ## Evidence Standard
 
-Each portfolio project should contain, where applicable:
+Each portfolio project contains, where applicable:
 
 1. **Task definition** — what the AI training/evaluation task is.
 2. **Input** — the prompt, sample, or dataset being evaluated.
@@ -32,8 +32,9 @@ Each portfolio project should contain, where applicable:
 5. **Correction** — an improved response, label, prompt, or decision.
 6. **Quality check** — a second-pass verification step.
 7. **Learning outcome** — what the project demonstrates to an employer.
+8. **Structured artifact** — a compact CSV/YAML record where appropriate for inspection and reuse.
 
-## Current Project Set
+## Completed Project Set
 
 | # | Project | Primary capability |
 |---|---|---|
@@ -44,34 +45,32 @@ Each portfolio project should contain, where applicable:
 | 05 | AI Instruction Following | Constraint and requirement checking |
 | 06 | AI Bias & Fairness Evaluation | Bias identification |
 | 07 | AI Hallucination Detection | Factuality verification |
-| 08 | AI Business & Financial Analysis | Domain reasoning |
+| 08 | AI-Assisted Financial Analysis & Decision Support Evaluation | Financial analysis and decision-support review |
 | 09 | AI Financial Data Annotation | Finance-focused labeling |
 | 10 | AI Quality Assurance & Error Analysis | QA methodology |
 | 11 | AI Training Workflow | End-to-end workflow design |
 | 12 | AI Data Quality Assurance | Dataset quality control |
 
-## Next Development Priorities
+## Evidence Layer
 
-### Phase 1 — Portfolio foundation
+The repository includes two complementary evidence layers:
 
-- Maintain a professional README and project index.
-- Ensure every project follows a consistent structure.
-- Clearly distinguish simulated portfolio work from professional employment experience.
-- Remove unsupported claims and vague AI terminology.
+- **`evidence/`** — concise, recruiter-friendly examples of key methods.
+- **`artifacts/`** — inspectable structured records supporting the 12 project case studies.
 
-### Phase 2 — Evidence depth
+All portfolio evidence is clearly identified as **simulated/self-directed** and is not presented as paid client work, production data, or professional AI employment.
 
-- Add structured examples and scoring tables to priority projects.
-- Add small, reproducible datasets where useful.
-- Add before/after examples for prompt and response improvement.
-- Add explicit error taxonomies for evaluation projects.
+## Employer-Readiness Standard
 
-### Phase 3 — Employer readiness
+The completed repository is designed so a recruiter can understand the candidate's positioning quickly and inspect representative evidence without reading every project in full.
 
-- Add concise project summaries suitable for a resume or LinkedIn.
-- Add links between the website, GitHub projects, resume, and LinkedIn.
-- Add a professional contact section without exposing unnecessary personal information.
-- Keep the repository easy for a recruiter to review in under five minutes.
+The repository should remain:
+
+- Accurate and transparent
+- Consistent with the resume and professional profile
+- Easy to navigate
+- Focused on practical AI-training capability
+- Clear about the distinction between professional accounting experience and self-directed AI work
 
 ## Quality Principle
 

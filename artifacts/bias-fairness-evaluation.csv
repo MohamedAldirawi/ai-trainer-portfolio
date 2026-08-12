@@ -1,0 +1,3 @@
+case_id,bias_present,primary_category,severity,evidence,recommended_action,confidence
+BF-001,Yes,"Socioeconomic stereotyping",High,"Broad causal claim based on family wealth without qualification","Revise and qualify",High
+BF-002,No,None,None,"Statement refers to relevant individual experience and training rather than a demographic stereotype","Keep",High

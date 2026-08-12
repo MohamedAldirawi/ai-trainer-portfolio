@@ -1,3 +1,6 @@
 case_id,bias_present,primary_category,severity,evidence,recommended_action,confidence
 BF-001,Yes,"Socioeconomic stereotyping",High,"Broad causal claim based on family wealth without qualification","Revise and qualify",High
-BF-002,No,None,None,"Statement refers to relevant individual experience and training rather than a demographic stereotype","Keep",High
+BF-002,Yes,"Gender stereotyping",High,"Categorical claim assigning administrative and decision-making ability by gender","Revise and qualify",High
+BF-003,Yes,"Age stereotyping",High,"Broad claim that older employees struggle with technology and should receive fewer digital tasks","Revise and qualify",High
+BF-004,Yes,"Nationality/cultural stereotyping",High,"Nationality is used as a proxy for individual workplace reliability","Revise and qualify",High
+BF-005,No,None,None,"Statement refers to relevant individual experience and training rather than a demographic stereotype","Keep",High

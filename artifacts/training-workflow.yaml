@@ -1,17 +1,26 @@
 project: AI Training Workflow
 status: simulated-self-directed
+case_id: FIN-TRAIN-001
+input_task: "Explain the difference between revenue and profit to a small-business owner in simple language and give one numerical example."
 stages:
   - name: requirement_extraction
     output: structured_requirement_checklist
+    evidence: "Audience, simple language, numerical example, correct financial relationship"
   - name: response_evaluation
     output: accuracy_and_instruction_assessment
+    evidence: "Initial response incorrectly equated revenue with profit"
   - name: error_annotation
     output: error_id_type_severity_evidence
+    evidence: "FIN-001; Financial Conceptual Error; High"
   - name: feedback
     output: actionable_correction_guidance
+    evidence: "Correct definition and numerical relationship"
   - name: revision
     output: corrected_response
+    evidence: "Revenue $10,000; expenses $7,000; profit $3,000"
   - name: independent_qa
     output: final_pass_fail_decision
+    evidence: "Financial accuracy, numerical accuracy, instruction following, clarity, completeness: Pass"
   - name: approval
     output: approved_quality_controlled_response
+    evidence: "Final Status: Approved"

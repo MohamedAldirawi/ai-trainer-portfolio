@@ -1,0 +1,5 @@
+error_id,category,severity,evidence,root_cause,action,final_status
+E001,Domain-specific / numerical,High,"Operating profit stopped at gross profit","Incomplete formula processing","Recalculate and correct",Fixed
+E002,Instruction Following,Medium,"Required format not followed","Requirement missed","Reformat response",Fixed
+E003,Factual,High,"Incorrect factual claim","Verification failure","Fact-check and correct",Fixed
+E004,Relevance,Low,"Unrelated content","Scope control failure","Remove content",Fixed

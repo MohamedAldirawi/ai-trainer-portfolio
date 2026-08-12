@@ -1,0 +1,6 @@
+item_id,text,label,confidence,rationale
+A01,"I was charged twice for the same order.",Billing,High,"Duplicate payment is the primary intent"
+A02,"I cannot log in to my account.",Account,High,"Account access is the primary issue"
+A03,"The application crashes when I upload a file.",Technical Support,High,"Application functionality is the primary issue"
+A04,"I want a refund for my payment.",Billing,High,"Refund request concerns a payment"
+A05,"I forgot my password and cannot access my account.",Account,High,"Credential-related account access issue"

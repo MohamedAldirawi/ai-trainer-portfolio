@@ -1,0 +1,6 @@
+metric,input_or_formula,verified_result,check
+Gross Profit,"120000 - 70000",50000,Pass
+Net Profit,"50000 - 30000 - 5000",15000,Pass
+Gross Margin,"50000 / 120000 * 100",41.7,Pass
+Net Margin,"15000 / 120000 * 100",12.5,Pass
+COGS,"80000 + 250000 - 70000",260000,Pass

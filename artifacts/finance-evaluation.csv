@@ -1,0 +1,6 @@
+case_id,criterion,score,max_score,finding,action
+FIN-001,Financial accuracy,5,5,"Definitions correct","Keep"
+FIN-001,Terminology,5,5,"Accounting terminology appropriate","Keep"
+FIN-001,Completeness,3,5,"Required numerical example missing","Add example"
+FIN-001,Instruction following,4,5,"Explicit example requirement missed","Revise response"
+FIN-001,Clarity,5,5,"Concise and understandable","Keep"

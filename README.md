@@ -106,7 +106,7 @@ The case studies are supported by inspectable structured artifacts in [`artifact
 | 05 | [AI Instruction Following](projects/05-ai-instruction-following.md) | Requirement and constraint checking |
 | 06 | [AI Bias & Fairness Evaluation](projects/06-ai-bias-and-fairness-evaluation.md) | Bias identification |
 | 07 | [AI Hallucination Detection](projects/07-ai-hallucination-detection.md) | Factuality verification |
-| 08 | [AI Business & Financial Analysis](projects/08-ai-business-financial-analysis.md) | Business and finance reasoning |
+| 08 | [AI-Assisted Financial Analysis & Decision Support Evaluation](projects/08-ai-business-financial-analysis.md) | Financial analysis and decision-support review |
 | 09 | [AI Financial Data Annotation](projects/09-ai-financial-data-annotation.md) | Finance-focused annotation |
 | 10 | [AI Quality Assurance & Error Analysis](projects/10-ai-quality-assurance-error-analysis.md) | QA methodology |
 | 11 | [AI Training Workflow](projects/11-ai-training-workflow.md) | End-to-end workflow design |
@@ -144,9 +144,9 @@ Seeking opportunities in:
 - AI Data Specialist
 - Business & Finance AI Training
 
-## Portfolio Development Roadmap
+## Portfolio Quality Standard
 
-See [PORTFOLIO-ROADMAP.md](PORTFOLIO-ROADMAP.md) for the quality standard and development plan used to strengthen this portfolio.
+See [PORTFOLIO-ROADMAP.md](PORTFOLIO-ROADMAP.md) for the finalized portfolio quality standard, project structure, and employer-readiness criteria.
 
 ---
 

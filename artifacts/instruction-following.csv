@@ -1,0 +1,7 @@
+case_id,requirement,result,evidence
+IF-001,"Explain balance sheet",PASS,"Concept explained"
+IF-001,"Exactly three bullet points",FAIL,"Four statements and wrong format"
+IF-001,"Use simple language",PASS,"Accessible wording"
+IF-001,"Include one example",PASS,"Numerical example included"
+IF-002,"Provide five interview questions",PASS,"Five questions provided"
+IF-002,"Do not provide answers",FAIL,"Answers were also supplied"

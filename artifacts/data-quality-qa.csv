@@ -1,0 +1,6 @@
+record_id,assigned_label,expected_label,qa_status,error_type,severity,action,readiness
+004,Account,Billing,Fail,"Incorrect Label",Medium,"Relabel as Billing",Corrected
+006,Billing,Needs Review,Escalate,"Ambiguous Data",Medium,"Secondary review",Escalated
+001,Billing,Billing,Pass,None,None,"No action",Approved
+002,Account,Account,Pass,None,None,"No action",Approved
+003,Technical Support,Technical Support,Pass,None,None,"No action",Approved

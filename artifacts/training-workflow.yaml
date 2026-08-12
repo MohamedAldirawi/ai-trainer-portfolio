@@ -1,0 +1,17 @@
+project: AI Training Workflow
+status: simulated-self-directed
+stages:
+  - name: requirement_extraction
+    output: structured_requirement_checklist
+  - name: response_evaluation
+    output: accuracy_and_instruction_assessment
+  - name: error_annotation
+    output: error_id_type_severity_evidence
+  - name: feedback
+    output: actionable_correction_guidance
+  - name: revision
+    output: corrected_response
+  - name: independent_qa
+    output: final_pass_fail_decision
+  - name: approval
+    output: approved_quality_controlled_response

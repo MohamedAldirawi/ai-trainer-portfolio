@@ -1,0 +1,4 @@
+prompt_id,version,objective,changes,expected_output_quality
+PR-001,V1,"Explain revenue and profit","No audience, structure, or example specified","Inconsistent"
+PR-001,V2,"Explain revenue and profit","Added beginner audience, definitions, example, concise structure","Improved"
+PR-001,V3,"Explain revenue and profit","Added role, precise requirements, fixed format, scope constraints","Strong"

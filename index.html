@@ -12,7 +12,6 @@
     body { font-family: Arial, Helvetica, sans-serif; background: #f7f9fc; color: #172033; line-height: 1.6; }
     a { text-decoration: none; color: inherit; }
     .container { width: min(1120px, 92%); margin: auto; }
-
     nav { background: #ffffff; border-bottom: 1px solid #e5e9f0; position: sticky; top: 0; z-index: 100; }
     .nav-inner { min-height: 70px; display: flex; justify-content: space-between; align-items: center; gap: 30px; }
     .logo { font-size: 20px; font-weight: 700; color: #16213e; }
@@ -20,7 +19,6 @@
     .nav-links { display: flex; gap: 25px; list-style: none; font-size: 14px; font-weight: 600; }
     .nav-links a:hover { color: #2563eb; }
     .nav-toggle { display: none; border: 1px solid #cbd5e1; background: #ffffff; color: #172033; border-radius: 8px; padding: 8px 10px; font-size: 20px; cursor: pointer; }
-
     .hero { background: linear-gradient(135deg, #eef4ff, #ffffff); padding: 100px 0 90px; }
     .hero-content { max-width: 1100px; display: grid; grid-template-columns: 280px 1fr; align-items: center; column-gap: 45px; }
     .hero-content > img { grid-column: 1; grid-row: 1 / span 5; }
@@ -35,24 +33,20 @@
     .button-primary:hover { background: #1d4ed8; transform: translateY(-2px); }
     .button-secondary { border: 1px solid #cbd5e1; background: #ffffff; color: #172033; }
     .button-secondary:hover { border-color: #2563eb; color: #2563eb; }
-
     section { padding: 80px 0; }
     .section-title { margin-bottom: 45px; }
     .section-title h2 { font-size: 34px; margin-bottom: 10px; color: #111827; }
     .section-title p { color: #687386; max-width: 720px; }
-
     .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 50px; align-items: start; }
     .about-text p { margin-bottom: 18px; color: #4b5563; font-size: 17px; }
     .expertise-box { background: #ffffff; border: 1px solid #e5e9f0; border-radius: 14px; padding: 28px; }
     .expertise-box h3 { margin-bottom: 20px; font-size: 20px; }
     .tags { display: flex; flex-wrap: wrap; gap: 9px; }
     .tag { background: #eef4ff; color: #1d4ed8; padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; }
-
     .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
     .skill-card { background: #ffffff; border: 1px solid #e5e9f0; border-radius: 12px; padding: 25px; }
     .skill-card h3 { font-size: 17px; margin-bottom: 12px; color: #111827; }
     .skill-card p { font-size: 14px; color: #687386; }
-
     .projects { background: #ffffff; }
     .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
     .project-card { background: #f8fafc; border: 1px solid #e3e8ef; border-radius: 12px; padding: 26px; display: flex; flex-direction: column; min-height: 285px; transition: 0.2s ease; }
@@ -65,12 +59,10 @@
     .project-link:hover { text-decoration: underline; }
     .artifact-link { color: #475569; font-size: 13px; font-weight: 700; }
     .artifact-link:hover { color: #2563eb; text-decoration: underline; }
-
     .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
     .value-card { background: #ffffff; border: 1px solid #e5e9f0; border-radius: 12px; padding: 28px; }
     .value-card h3 { margin-bottom: 12px; font-size: 19px; }
     .value-card p { color: #667085; font-size: 15px; }
-
     .evidence { background: #f1f5f9; }
     .evidence-box { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 30px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; align-items: center; }
     .evidence-box h3 { font-size: 22px; margin-bottom: 10px; color: #111827; }
@@ -78,47 +70,17 @@
     .evidence-list { list-style: none; display: grid; gap: 9px; }
     .evidence-list li { color: #475569; font-size: 14px; }
     .evidence-list strong { color: #172033; }
-
     .contact { background: #111827; color: #ffffff; text-align: center; }
     .contact h2 { font-size: 38px; margin-bottom: 15px; }
     .contact p { color: #cbd5e1; max-width: 650px; margin: 0 auto 30px; }
     .contact .button-secondary { background: transparent; color: #ffffff; border-color: #64748b; }
     .contact .button-secondary:hover { border-color: #ffffff; color: #ffffff; }
-
     footer { background: #0b1120; color: #94a3b8; padding: 25px 0; text-align: center; font-size: 13px; }
-
-    @media (max-width: 900px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .skills-grid { grid-template-columns: repeat(2, 1fr); }
-      .projects-grid { grid-template-columns: repeat(2, 1fr); }
-      .value-grid { grid-template-columns: 1fr; }
-      .evidence-box { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 768px) {
-      .nav-inner { min-height: 60px; position: relative; }
-      .nav-toggle { display: block; }
-      .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; flex-direction: column; gap: 0; background: #ffffff; border: 1px solid #e5e9f0; border-top: 0; padding: 8px 0; box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08); }
-      .nav-links.open { display: flex; }
-      .nav-links li a { display: block; padding: 12px 20px; }
-      .nav-links li a:hover { background: #f8fafc; }
-      .hero-content { grid-template-columns: 1fr; text-align: center; gap: 25px; }
-      .hero-content > img { grid-column: 1; grid-row: auto; width: 240px !important; margin: 0 auto; }
-      .hero-content > .eyebrow, .hero-content > h1, .hero-content > h2, .hero-content > p, .hero-content > .buttons { grid-column: 1; }
-      .hero-content > .buttons { justify-content: center; }
-    }
-
-    @media (max-width: 600px) {
-      .hero { padding: 70px 0; }
-      section { padding: 60px 0; }
-      .skills-grid, .projects-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 43px; }
-      .hero h2 { font-size: 21px; }
-      .hero p { font-size: 16px; }
-    }
+    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } .skills-grid { grid-template-columns: repeat(2, 1fr); } .projects-grid { grid-template-columns: repeat(2, 1fr); } .value-grid { grid-template-columns: 1fr; } .evidence-box { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { .nav-inner { min-height: 60px; position: relative; } .nav-toggle { display: block; } .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; flex-direction: column; gap: 0; background: #ffffff; border: 1px solid #e5e9f0; border-top: 0; padding: 8px 0; box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08); } .nav-links.open { display: flex; } .nav-links li a { display: block; padding: 12px 20px; } .nav-links li a:hover { background: #f8fafc; } .hero-content { grid-template-columns: 1fr; text-align: center; gap: 25px; } .hero-content > img { grid-column: 1; grid-row: auto; width: 240px !important; margin: 0 auto; } .hero-content > .eyebrow, .hero-content > h1, .hero-content > h2, .hero-content > p, .hero-content > .buttons { grid-column: 1; } .hero-content > .buttons { justify-content: center; } }
+    @media (max-width: 600px) { .hero { padding: 70px 0; } section { padding: 60px 0; } .skills-grid, .projects-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 43px; } .hero h2 { font-size: 21px; } .hero p { font-size: 16px; } }
   </style>
 </head>
-
 <body>
   <nav>
     <div class="container nav-inner">
@@ -134,7 +96,6 @@
       </ul>
     </div>
   </nav>
-
   <header class="hero">
     <div class="container hero-content">
       <img src="My Office.jpeg" alt="Mohammed A.M. Aldirawi" style="width:280px; height:auto; border-radius:18px; object-fit:contain; flex-shrink:0;">
@@ -148,35 +109,22 @@
       </div>
     </div>
   </header>
-
   <section id="about">
     <div class="container">
-      <div class="section-title">
-        <h2>About</h2>
-        <p>A professional profile combining business and finance knowledge with practical, self-directed AI training and evaluation work.</p>
-      </div>
+      <div class="section-title"><h2>About</h2><p>A professional profile combining business and finance knowledge with practical, self-directed AI training and evaluation work.</p></div>
       <div class="about-grid">
         <div class="about-text">
           <p>I hold a Bachelor's degree in Accounting and bring professional experience across accounting, auditing, financial analysis, and business operations.</p>
           <p>My current professional direction focuses on AI Trainer, AI Data Annotation, Prompt Engineering, and AI Response Evaluation roles.</p>
           <p>This portfolio demonstrates how I apply structured evaluation, annotation, prompt iteration, quality assurance, and business &amp; finance domain knowledge to practical AI training tasks. The work is self-directed and designed to demonstrate transferable capability rather than claim prior AI employment.</p>
         </div>
-        <div class="expertise-box">
-          <h3>Professional Focus</h3>
-          <div class="tags">
-            <span class="tag">AI Training</span><span class="tag">Data Annotation</span><span class="tag">Prompt Engineering</span><span class="tag">AI Evaluation</span><span class="tag">Quality Assurance</span><span class="tag">Business Analysis</span><span class="tag">Financial Analysis</span><span class="tag">Accounting</span>
-          </div>
-        </div>
+        <div class="expertise-box"><h3>Professional Focus</h3><div class="tags"><span class="tag">AI Training</span><span class="tag">Data Annotation</span><span class="tag">Prompt Engineering</span><span class="tag">AI Evaluation</span><span class="tag">Quality Assurance</span><span class="tag">Business Analysis</span><span class="tag">Financial Analysis</span><span class="tag">Accounting</span></div></div>
       </div>
     </div>
   </section>
-
   <section id="skills">
     <div class="container">
-      <div class="section-title">
-        <h2>Core AI Skills</h2>
-        <p>Practical capabilities demonstrated through the portfolio projects and supporting evidence.</p>
-      </div>
+      <div class="section-title"><h2>Core AI Skills</h2><p>Practical capabilities demonstrated through the portfolio projects and supporting evidence.</p></div>
       <div class="skills-grid">
         <div class="skill-card"><h3>AI Response Evaluation</h3><p>Evaluating AI outputs for accuracy, relevance, clarity, completeness, and instruction following.</p></div>
         <div class="skill-card"><h3>Data Annotation</h3><p>Structured labeling and analysis of AI-related datasets using consistent criteria and quality controls.</p></div>
@@ -185,36 +133,28 @@
       </div>
     </div>
   </section>
-
   <section id="projects" class="projects">
     <div class="container">
-      <div class="section-title">
-        <h2>AI Portfolio Projects</h2>
-        <p>A collection of 12 practical projects demonstrating AI training, evaluation, annotation, and business &amp; finance applications.</p>
-      </div>
+      <div class="section-title"><h2>AI Portfolio Projects</h2><p>A collection of 12 practical projects demonstrating AI training, evaluation, annotation, and business &amp; finance applications.</p></div>
       <div class="projects-grid">
-        <div class="project-card"><div class="project-number">PROJECT 01</div><h3>AI Response Evaluation</h3><p>Structured evaluation of AI-generated responses using accuracy, relevance, clarity, completeness, and instruction-following criteria.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/01-ai-response-evaluation.md" target="_blank" rel="noopener">View Project →</a><a class="artifact-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/artifacts/01-response-evaluation.csv" target="_blank" rel="noopener">Artifact</a></div></div>
-        <div class="project-card"><div class="project-number">PROJECT 02</div><h3>Prompt Engineering Practice</h3><p>Practical prompt design and iteration techniques for improving the quality, consistency, and usefulness of AI-generated responses.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/02-prompt-engineering.md" target="_blank" rel="noopener">View Project →</a><a class="artifact-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/artifacts/02-prompt-iterations.csv" target="_blank" rel="noopener">Artifact</a></div></div>
-        <div class="project-card"><div class="project-number">PROJECT 03</div><h3>AI Data Annotation</h3><p>Structured data annotation methodology focused on consistency, labeling accuracy, ambiguity handling, and quality control.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/03-data-annotation.md" target="_blank" rel="noopener">View Project →</a><a class="artifact-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/artifacts/03-data-annotation.csv" target="_blank" rel="noopener">Artifact</a></div></div>
-        <div class="project-card"><div class="project-number">PROJECT 04</div><h3>Business &amp; Finance AI Training</h3><p>Applying accounting, business, finance, and economic knowledge to domain-aware AI training and evaluation scenarios.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/04-business-finance-ai-training.md" target="_blank" rel="noopener">View Project →</a><a class="artifact-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/artifacts/04-finance-evaluation.csv" target="_blank" rel="noopener">Artifact</a></div></div>
-        <div class="project-card"><div class="project-number">PROJECT 05</div><h3>AI Instruction Following</h3><p>Evaluating whether AI systems correctly follow explicit user requirements, constraints, format, and tone.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/05-ai-instruction-following.md" target="_blank" rel="noopener">View Project →</a><a class="artifact-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/artifacts/05-instruction-following.csv" target="_blank" rel="noopener">Artifact</a></div></div>
-        <div class="project-card"><div class="project-number">PROJECT 06</div><h3>AI Bias &amp; Fairness Evaluation</h3><p>Evaluating stereotyping, fairness risks, and valid individual differences across multiple bias scenarios.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/06-ai-bias-and-fairness-evaluation.md" target="_blank" rel="noopener">View Project →</a><a class="artifact-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/artifacts/06-bias-fairness-evaluation.csv" target="_blank" rel="noopener">Artifact</a></div></div>
-        <div class="project-card"><div class="project-number">PROJECT 07</div><h3>AI Hallucination Detection</h3><p>Detecting unsupported claims and factual errors through an evidence-based verification workflow.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/07-ai-hallucination-detection.md" target="_blank" rel="noopener">View Project →</a><a class="artifact-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/artifacts/07-hallucination-fact-check.csv" target="_blank" rel="noopener">Artifact</a></div></div>
-        <div class="project-card"><div class="project-number">PROJECT 08</div><h3>AI-Assisted Financial Analysis &amp; Decision Support Evaluation</h3><p>Evaluating financial metrics, ratios, trends, assumptions, business conclusions, and decision quality in AI-assisted analysis.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/08-ai-business-financial-analysis.md" target="_blank" rel="noopener">View Project →</a><a class="artifact-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/artifacts/08-financial-analysis.csv" target="_blank" rel="noopener">Artifact</a></div></div>
-        <div class="project-card"><div class="project-number">PROJECT 09</div><h3>AI Financial Data Annotation</h3><p>Applying structured annotation principles to financial and business-related AI data, including evidence and ambiguity handling.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/09-ai-financial-data-annotation.md" target="_blank" rel="noopener">View Project →</a><a class="artifact-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/artifacts/09-financial-annotation.csv" target="_blank" rel="noopener">Artifact</a></div></div>
-        <div class="project-card"><div class="project-number">PROJECT 10</div><h3>AI Quality Assurance &amp; Error Analysis</h3><p>Identifying, categorizing, root-causing, and resolving quality problems in AI-generated outputs.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/10-ai-quality-assurance-error-analysis.md" target="_blank" rel="noopener">View Project →</a><a class="artifact-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/artifacts/10-qa-error-log.csv" target="_blank" rel="noopener">Artifact</a></div></div>
-        <div class="project-card"><div class="project-number">PROJECT 11</div><h3>AI Training Workflow</h3><p>A structured end-to-end workflow demonstrating requirement extraction, evaluation, annotation, feedback, revision, and independent QA.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/11-ai-training-workflow.md" target="_blank" rel="noopener">View Project →</a><a class="artifact-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/artifacts/11-ai-training-workflow.yaml" target="_blank" rel="noopener">Artifact</a></div></div>
-        <div class="project-card"><div class="project-number">PROJECT 12</div><h3>AI Data Quality Assurance</h3><p>Quality assurance for maintaining consistency, accuracy, reliability, and readiness in AI training data.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/12-ai-data-quality-assurance.md" target="_blank" rel="noopener">View Project →</a><a class="artifact-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/artifacts/12-data-quality-qa.csv" target="_blank" rel="noopener">Artifact</a></div></div>
+        <div class="project-card"><div class="project-number">PROJECT 01</div><h3>AI Response Evaluation</h3><p>Structured evaluation of AI-generated responses using accuracy, relevance, clarity, completeness, and instruction-following criteria.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/01-ai-response-evaluation.md" target="_blank" rel="noopener">View Project →</a></div></div>
+        <div class="project-card"><div class="project-number">PROJECT 02</div><h3>Prompt Engineering</h3><p>Prompt design and optimization through structured iteration, constraints, and comparative evaluation.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/02-prompt-engineering.md" target="_blank" rel="noopener">View Project →</a></div></div>
+        <div class="project-card"><div class="project-number">PROJECT 03</div><h3>Data Annotation</h3><p>Structured labeling and classification using explicit annotation criteria, rationale, confidence, and ambiguity handling.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/03-data-annotation.md" target="_blank" rel="noopener">View Project →</a></div></div>
+        <div class="project-card"><div class="project-number">PROJECT 04</div><h3>Business &amp; Finance AI Training</h3><p>Domain-specific AI evaluation covering financial accuracy, numerical verification, terminology, assumptions, and business logic.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/04-business-finance-ai-training.md" target="_blank" rel="noopener">View Project →</a></div></div>
+        <div class="project-card"><div class="project-number">PROJECT 05</div><h3>AI Instruction Following</h3><p>Checking whether AI outputs satisfy explicit requirements, constraints, format rules, and task objectives.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/05-ai-instruction-following.md" target="_blank" rel="noopener">View Project →</a></div></div>
+        <div class="project-card"><div class="project-number">PROJECT 06</div><h3>AI Bias &amp; Fairness Evaluation</h3><p>Identifying potential bias and fairness concerns using structured labels, evidence, and review criteria.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/06-ai-bias-and-fairness-evaluation.md" target="_blank" rel="noopener">View Project →</a></div></div>
+        <div class="project-card"><div class="project-number">PROJECT 07</div><h3>AI Hallucination Detection</h3><p>Fact-checking AI-generated claims, identifying unsupported statements, and documenting evidence-based corrections.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/07-ai-hallucination-detection.md" target="_blank" rel="noopener">View Project →</a></div></div>
+        <div class="project-card"><div class="project-number">PROJECT 08</div><h3>AI-Assisted Financial Analysis &amp; Decision Support Evaluation</h3><p>Reviewing AI-generated financial analysis for calculations, assumptions, trends, reasoning, and decision relevance.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/08-ai-business-financial-analysis.md" target="_blank" rel="noopener">View Project →</a></div></div>
+        <div class="project-card"><div class="project-number">PROJECT 09</div><h3>AI Financial Data Annotation</h3><p>Finance-focused annotation of structured information using consistent labels, rationale, and quality controls.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/09-ai-financial-data-annotation.md" target="_blank" rel="noopener">View Project →</a></div></div>
+        <div class="project-card"><div class="project-number">PROJECT 10</div><h3>AI Quality Assurance &amp; Error Analysis</h3><p>Structured QA workflow for detecting defects, classifying root causes, and documenting readiness decisions.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/10-ai-quality-assurance-error-analysis.md" target="_blank" rel="noopener">View Project →</a></div></div>
+        <div class="project-card"><div class="project-number">PROJECT 11</div><h3>AI Training Workflow</h3><p>End-to-end workflow design connecting task definition, annotation, evaluation, feedback, QA, and final review.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/11-ai-training-workflow.md" target="_blank" rel="noopener">View Project →</a></div></div>
+        <div class="project-card"><div class="project-number">PROJECT 12</div><h3>AI Data Quality Assurance</h3><p>Dataset quality control covering defect detection, consistency checks, ambiguity, and readiness decisions.</p><div class="project-actions"><a class="project-link" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio/blob/main/projects/12-ai-data-quality-assurance.md" target="_blank" rel="noopener">View Project →</a></div></div>
       </div>
     </div>
   </section>
-
   <section id="evidence" class="evidence">
     <div class="container">
-      <div class="section-title">
-        <h2>Evidence &amp; Hands-On Artifacts</h2>
-        <p>The projects are supported by inspectable evidence rather than case-study descriptions alone.</p>
-      </div>
+      <div class="section-title"><h2>Evidence</h2><p>Inspectable evidence supporting the portfolio case studies and demonstrating how the methodologies are applied.</p></div>
       <div class="evidence-box">
         <div>
           <h3>See the Work Behind the Case Studies</h3>
@@ -232,13 +172,9 @@
       </div>
     </div>
   </section>
-
   <section id="expertise">
     <div class="container">
-      <div class="section-title">
-        <h2>Business &amp; Finance Domain Expertise</h2>
-        <p>Domain knowledge supporting specialized AI training, evaluation, annotation, and analysis tasks.</p>
-      </div>
+      <div class="section-title"><h2>Business &amp; Finance Domain Expertise</h2><p>Domain knowledge supporting specialized AI training, evaluation, annotation, and analysis tasks.</p></div>
       <div class="value-grid">
         <div class="value-card"><h3>Accounting &amp; Financial Analysis</h3><p>Accounting principles, financial analysis, auditing, financial data, and business reporting.</p></div>
         <div class="value-card"><h3>Business &amp; Economics</h3><p>Business operations, economic concepts, digital economy, and analytical reasoning.</p></div>
@@ -246,7 +182,6 @@
       </div>
     </div>
   </section>
-
   <section id="contact" class="contact">
     <div class="container">
       <h2>Let's Connect</h2>
@@ -254,30 +189,15 @@
       <div class="buttons" style="justify-content:center;">
         <a class="button button-primary" href="mailto:abusakhir44@gmail.com?subject=AI%20Trainer%20Portfolio%20Inquiry">Email Me</a>
         <a class="button button-secondary" href="https://github.com/MohamedAldirawi/ai-trainer-portfolio" target="_blank" rel="noopener">GitHub</a>
-        <a class="button button-secondary" href="https://www.linkedin.com/in/mohammed-a-m-aldirawi-95b026256/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="button button-secondary" href="https://www.linkedin.com/in/mohammed-am-aldirawi/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
       <p style="margin-top:18px; margin-bottom:0; font-size:13px;">Direct email: abusakhir44@gmail.com</p>
     </div>
   </section>
-
-  <footer>
-    <div class="container">© 2026 Mohammed A.M. Aldirawi — AI Trainer Portfolio</div>
-  </footer>
-
+  <footer><div class="container">© 2026 Mohammed A.M. Aldirawi — AI Trainer Portfolio</div></footer>
   <script>
-    function toggleNav() {
-      const nav = document.getElementById('navLinks');
-      const button = document.querySelector('.nav-toggle');
-      const isOpen = nav.classList.toggle('open');
-      button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    }
-
-    function closeNav() {
-      const nav = document.getElementById('navLinks');
-      const button = document.querySelector('.nav-toggle');
-      nav.classList.remove('open');
-      button.setAttribute('aria-expanded', 'false');
-    }
+    function toggleNav() { const nav = document.getElementById('navLinks'); const button = document.querySelector('.nav-toggle'); const isOpen = nav.classList.toggle('open'); button.setAttribute('aria-expanded', isOpen ? 'true' : 'false'); }
+    function closeNav() { const nav = document.getElementById('navLinks'); const button = document.querySelector('.nav-toggle'); nav.classList.remove('open'); button.setAttribute('aria-expanded', 'false'); }
   </script>
 </body>
 </html>

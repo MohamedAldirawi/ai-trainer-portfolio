@@ -65,11 +65,10 @@ The resume and LinkedIn should describe the candidate's real accounting/business
   - Accounting/auditing work including invoice entry in Excel, account review, and tax-related work.
 - **Tarbush Restaurant, Malaysia | 2019–2025**
   - Accounting/business operations including inventory movement, sales invoices, manufacturing quantities, sales comparison, and investigation of variances.
-- **Purchase Accountant — Berkat Madinah, Malaysia | 2025–2026**
+- **Purchases Accountant — Berkat Madinah, Malaysia | Aug 2025–Jul 2026**
   - Managed purchase accounting activities and maintained accurate purchase records.
   - Reviewed supplier invoices and purchase transactions for accuracy and completeness.
   - Coordinated with suppliers regarding invoices, transactions, and related purchasing matters.
-  - Used Microsoft Excel, Gross Synergy, and AutoCount for transaction processing and accounting records.
   - Maintained organized transaction records and supported reliable financial data management.
   - Identified discrepancies and supported corrective action to improve data accuracy and reliability.
 
@@ -109,7 +108,7 @@ A recruiter should understand the candidate in one sentence:
 
 1. Use the exact professional title: **AI Trainer | AI Data Annotation | Prompt Engineering | Business & Finance Domain Expert**.
 2. Keep education as **Bachelor's Degree in Accounting, Islamic University of Gaza, 2009–2013**.
-3. Keep **Malay — Intermediate** consistently across Resume, LinkedIn, and GitHub.
+3. Keep **Malay — Intermediate** consistently in the source profile and represent it on LinkedIn as **Limited working proficiency**, LinkedIn's closest applicable level for the stated intermediate proficiency.
 4. Keep real employment experience separate from self-directed AI portfolio work.
 5. Use the same AI capability categories across resume, LinkedIn, and GitHub.
 6. Link the GitHub portfolio from the resume and LinkedIn.
